@@ -1,6 +1,7 @@
-﻿using OpenAI;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Diagnostics;
+
 
 namespace Samples.Whisper
 {
@@ -17,7 +18,6 @@ namespace Samples.Whisper
         private AudioClip clip;
         private bool isRecording;
         private float time;
-        private OpenAIApi openai = new OpenAIApi("");
 
         private void Start()
         {
@@ -53,29 +53,61 @@ namespace Samples.Whisper
             #endif
         }
 
-        private async void EndRecording()
-        {
-            message.text = "Transcripting...";
-            
-            #if !UNITY_WEBGL
-            Microphone.End(null);
-            #endif
-            
-            byte[] data = SaveWav.Save(fileName, clip);
-            
-            var req = new CreateAudioTranscriptionsRequest
-            {
-                FileData = new FileData() {Data = data, Name = "audio.wav"},
-                // File = Application.persistentDataPath + "/" + fileName,
-                Model = "whisper-1",
-                Language = "en"
-            };
-            var res = await openai.CreateAudioTranscription(req);
+////////////////////
 
-            progressBar.fillAmount = 0;
-            message.text = res.Text;
-            recordButton.enabled = true;
-        }
+        private async void EndRecording()
+    {
+        message.text = "Transcribing...";
+
+    #if !UNITY_WEBGL
+    Microphone.End(null);
+    #endif
+
+    // wait a frame so Unity finalizes the clip
+    await System.Threading.Tasks.Task.Delay(100);
+
+///////////
+
+    UnityEngine.Debug.Log("Clip samples: " + clip.samples);
+
+    string audioPath = Application.persistentDataPath + "/" + fileName;
+
+    byte[] data = SaveWav.Save(fileName, clip);
+    System.IO.File.WriteAllBytes(audioPath, data);
+
+    UnityEngine.Debug.Log("Audio file: " + audioPath);
+
+///////////
+        //string whisperPath = "C:/Users/anita/Downloads/whisper-bin-x64/Release/whisper-stream.exe";
+        string whisperPath = "C:/Users/anita/Downloads/whisper-bin-x64/Release/whisper-cli.exe";
+        string modelPath = "C:/Users/anita/Downloads/whisper-bin-x64/Release/models/ggml-base.en.bin";
+
+        string result = await System.Threading.Tasks.Task.Run(() =>
+        {
+            using (Process process = new Process())
+            {
+                process.StartInfo.FileName = whisperPath;
+                process.StartInfo.Arguments = "-m \"" + modelPath + "\" -f \"" + audioPath + "\"";
+                process.StartInfo.RedirectStandardOutput = true;
+                process.StartInfo.UseShellExecute = false;
+                process.StartInfo.CreateNoWindow = true;
+
+                process.Start();
+
+                string output = process.StandardOutput.ReadToEnd();
+                process.WaitForExit();
+
+                process.Close();   // VERY IMPORTANT
+                return output;
+            }
+        });
+
+        progressBar.fillAmount = 0;
+        message.text = result;
+        recordButton.enabled = true;
+    }
+
+/////////////////////////////
 
         private void Update()
         {
