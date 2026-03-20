@@ -148,22 +148,22 @@ Material:
     - _DuneDirectionX: 6.4
     - _DuneDirectionY: 1.157
     - _EnvironmentReflections: 1
-    - _GlitterIntensity: 0.34
-    - _GlitterThreshold: 0.6
+    - _GlitterIntensity: 0.2
+    - _GlitterThreshold: 1.65
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
     - _OcclusionStrength: 1
-    - _OceanSpecularPower: 0.54
+    - _OceanSpecularPower: 3.57
     - _OceanSpecularStrength: 0.21
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _RimPower: 0.7
-    - _RimStrength: 1.46
-    - _SandStrength: 0.39
+    - _RimStrength: 0.64
+    - _SandStrength: 0.31
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
