@@ -60,9 +60,9 @@ Material:
     - _WindStrength: 2
     - _Windspeed: 2
     m_Colors:
-    - _Tint: {r: 0.6017389, g: 0.745283, b: 0.3480331, a: 1}
+    - _Tint: {r: 0.49030256, g: 0.6226415, b: 0.26139194, a: 1}
     - _TopColor: {r: 1, g: 0.8238035, b: 0, a: 1}
-    - _Top_Color: {r: 0.9137255, g: 0.9490196, b: 0.05490196, a: 1}
+    - _Top_Color: {r: 0.69774085, g: 0.7264151, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &2819998412323993533
