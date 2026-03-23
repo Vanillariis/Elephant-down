@@ -1,0 +1,677 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Add_Look_Left
+  serializedVersion: 7
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.01376251, y: -0.024687376, z: -0.27915132, w: 0.95983106}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigLBLeg1_04/RigLBLeg2_05/RigLBLegAnkle_06
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.00076771236, y: 0.0016514593, z: 0.36819303, w: 0.9297476}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigLBLeg1_04/RigLBLeg2_05
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.1686794, y: -0.98531437, z: -0.019358302, w: 0.018112745}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigLBLeg1_04
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.09795848, y: -0.10029699, z: -0.6036628, w: 0.78481585}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigRBLeg1_013/RigRBLeg2_014/RigRBLegAnkle_015/RigRBLegDigit11_016
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.11036067, y: 0.10820201, z: -0.60171825, w: 0.78361213}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigRBLeg1_013/RigRBLeg2_014/RigRBLegAnkle_015/RigRBLegDigit21_018
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.35719302, y: 0.33985886, z: -0.52392155, w: 0.69456124}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigRBLeg1_013/RigRBLeg2_014/RigRBLegAnkle_015/RigRBLegDigit31_020
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.013763754, y: 0.024680573, z: -0.27917147, w: 0.95982534}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigRBLeg1_013/RigRBLeg2_014/RigRBLegAnkle_015
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.0007687911, y: -0.0016441061, z: 0.3682032, w: 0.9297436}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigRBLeg1_013/RigRBLeg2_014
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.16867217, y: -0.9853156, z: 0.019358234, w: -0.018112974}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigRBLeg1_013
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.0024405567, y: -0.021528821, z: 0.082399085, w: 0.9963639}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigLFLegCollarbone_026/RigLFLeg1_00/RigLFLeg2_01/RigLFLegAnkle_027
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.0011411521, y: 0.0011967167, z: -0.21181059, w: 0.97730935}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigLFLegCollarbone_026/RigLFLeg1_00/RigLFLeg2_01
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.5575024, y: 0.42372718, z: -0.32482472, w: 0.6357164}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigLFLegCollarbone_026/RigLFLeg1_00
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.0069728578, y: 0.018940754, z: -0.019996343, w: 0.9995963}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigLEarRoot1_043/RigLEarBottom1_044/RigLEarBottom2_045/RigLEarBottom3_046
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.008099187, y: -0.03374157, z: -0.020437868, w: 0.9991888}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigLEarRoot1_043/RigLEarBottom1_044/RigLEarBottom2_045
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.0719657, y: -0.24228439, z: -0.6911222, w: 0.67710364}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigLEarRoot1_043/RigLEarBottom1_044
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.005404943, y: -0.033409227, z: -0.03895283, w: 0.9986678}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigLEarRoot1_043/RigLEarMid1_047/RigLEarMid2_048/RigLEarMid3_049
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.015345053, y: -0.042946573, z: -0.053920187, w: 0.9975032}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigLEarRoot1_043/RigLEarMid1_047/RigLEarMid2_048
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.17207892, y: -0.29485205, z: -0.46923652, w: 0.8144128}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigLEarRoot1_043/RigLEarMid1_047
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.009183541, y: -0.025731117, z: -0.14024283, w: 0.98974013}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigLEarRoot1_043/RigLEarTop1_050/RigLEarTop2_051/RigLEarTop3_052
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.03825757, y: -0.1455447, z: -0.2530672, w: 0.95567256}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigLEarRoot1_043/RigLEarTop1_050/RigLEarTop2_051
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.008918202, y: -0.229468, z: -0.12651032, w: 0.96501815}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigLEarRoot1_043/RigLEarTop1_050
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.054957267, y: 0.5671647, z: 0.20159993, w: 0.79665637}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigLEarRoot1_043
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.053632334, y: 0.11802476, z: -0.01679176, w: 0.9914191}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigREarRoot1_056/RigREarBottom1_057/RigREarBottom2_058/RigREarBottom3_059
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.056801785, y: -0.008181935, z: -0.028744075, w: 0.9979381}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigREarRoot1_056/RigREarBottom1_057/RigREarBottom2_058
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.094749525, y: 0.21007958, z: -0.702417, w: 0.67342365}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigREarRoot1_056/RigREarBottom1_057
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.055613443, y: 0.09971741, z: -0.048327245, w: 0.99228424}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigREarRoot1_056/RigREarMid1_060/RigREarMid2_061/RigREarMid3_062
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.036613524, y: 0.060025603, z: -0.072437204, w: 0.9948916}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigREarRoot1_056/RigREarMid1_060/RigREarMid2_061
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.05531961, y: 0.19554152, z: -0.47585872, w: 0.85572296}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigREarRoot1_056/RigREarMid1_060
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.047604453, y: 0.08479536, z: -0.12715375, w: 0.9871046}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigREarRoot1_056/RigREarTop1_063/RigREarTop2_064/RigREarTop3_065
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.008666781, y: 0.23048912, z: -0.2417303, w: 0.94253176}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigREarRoot1_056/RigREarTop1_063/RigREarTop2_064
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.029376252, y: 0.16710038, z: -0.14894539, w: 0.9741816}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigREarRoot1_056/RigREarTop1_063
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.15036201, y: -0.70881164, z: -0.052588556, w: 0.6871767}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigREarRoot1_056
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.000000035444227, y: 0.16023748, z: -0.0000000028355382, w: 0.9870785}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.00000008114926, y: 0.32653558, z: -0.00000003112414, w: 0.9451849}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.000000043203862, y: 0.16023746, z: 0.000000020153225, w: 0.9870785}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.0023934476, y: 0.02137573, z: 0.08237794, w: 0.996369}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigRFLegCollarbone_088/RigRFLeg1_089/RigRFLeg2_090/RigRFLegAnkle_091
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.0012055755, y: -0.00090049446, z: -0.21178319, w: 0.97731555}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigRFLegCollarbone_088/RigRFLeg1_089/RigRFLeg2_090
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.5574383, y: -0.42380816, z: -0.3249235, w: 0.63566804}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigRFLegCollarbone_088/RigRFLeg1_089
+  m_CompressedRotationCurves: []
+  m_EulerCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.25620553, y: 0.027602691, z: -0.00000015258789}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigTrunk1_072/RigTrunk2_073/RigTrunk3_074/RigTrunk4_075/RigTrunk5_076/RigTrunk6_077/RigTrunk7_078/RigTrunk8_079/RigTrunk9_080
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_PPtrCurves: []
+  m_SampleRate: 60
+  m_WrapMode: 2
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings: []
+    pptrCurveMapping: []
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
+    m_StartTime: 0
+    m_StopTime: 0
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 1
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_Events: []
