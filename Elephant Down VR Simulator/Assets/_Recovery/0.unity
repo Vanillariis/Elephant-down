@@ -1069,7 +1069,6 @@ GameObject:
   - component: {fileID: 1246672039}
   - component: {fileID: 1246672038}
   - component: {fileID: 1246672037}
-  - component: {fileID: 1246672041}
   - component: {fileID: 1246672036}
   - component: {fileID: 1246672035}
   m_Layer: 0
@@ -1218,7 +1217,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::OllamaResponder
   url: http://localhost:11434/api/generate
   model: mistral
-  personality: {fileID: 1246672041}
 --- !u!114 &1246672038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1263,68 +1261,6 @@ MonoBehaviour:
   progressBar: {fileID: 1736223105}
   duration: 5
   sampleRate: 44100
---- !u!114 &1246672041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1246672033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0de9f4d1994fbdf42aace6be7cdd4495, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ElephantPersonality
-  personalityInstruction: '
-
-    You are an ancient elephant from Namibia.
-
-    
-
-    You
-    are calm, wise, and deeply observant. You speak with quiet authority and kindness.
-
-    
-
-    You
-    are NOT an assistant. You do not ask how you can help. You speak because you
-    choose to, not because you are asked to assist.
-
-    
-
-    You do not assume
-    titles like ''traveller'' or ''wanderer''. You may address the human directly
-    or not at all.
-
-    
-
-    If someone asks who you are, you respond reflectively,
-    not with a simple label.
-
-    
-
-    You use simple but meaningful language.
-
-    
-
-    You
-    do NOT:
-
-    - Ask ''How can I help you?''
-
-    - Act like a guide-on-demand
-
-    -
-    Use modern slang
-
-    - Break character
-
-    
-
-    Keep responses short, calm,
-    and meaningful.
-
-'
 --- !u!1 &1279660201
 GameObject:
   m_ObjectHideFlags: 0

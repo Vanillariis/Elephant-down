@@ -9,27 +9,45 @@ public class OllamaResponder : MonoBehaviour
     [Header("Ollama Settings")]
     [SerializeField] private string url = "http://localhost:11434/api/generate";
     [SerializeField] private string model = "mistral";
+    
+    [SerializeField] private ElephantPersonality personality;
 
     public Action<string> OnResponseReady;
+    public Action<string> OnPartialResponse;
 
     private static HttpClient client = new HttpClient();
 
     public async void GenerateResponse(string text)
     {
+        string engineeredPrompt = personality.BuildPrompt(text);
+
         var json = JsonUtility.ToJson(new Request
         {
             model = model,
-            prompt = text,
-            stream = false
+            prompt = engineeredPrompt,
+            stream = true
         });
 
         var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-        var response = await client.PostAsync(url, content);
-        string body = await response.Content.ReadAsStringAsync();
-
-        var parsed = JsonUtility.FromJson<Response>(body);
-        OnResponseReady?.Invoke(parsed.response);
+        var request = new HttpRequestMessage(HttpMethod.Post, url) { Content = content };
+        var response = await client.SendAsync(request, HttpCompletionOption.ResponseHeadersRead);
+        using (var stream = await response.Content.ReadAsStreamAsync())
+        using (var reader = new System.IO.StreamReader(stream))
+        {
+            string line;
+            StringBuilder fullResponse = new StringBuilder();
+            while ((line = await reader.ReadLineAsync()) != null)
+            {
+                if (string.IsNullOrWhiteSpace(line)) continue;
+                // Each line is a JSON object with a partial response
+                var parsed = JsonUtility.FromJson<Response>(line);
+                fullResponse.Append(parsed.response);
+                OnPartialResponse?.Invoke(fullResponse.ToString());
+            }
+            // Final callback for compatibility
+            OnResponseReady?.Invoke(fullResponse.ToString());
+        }
     }
 
     [Serializable]
