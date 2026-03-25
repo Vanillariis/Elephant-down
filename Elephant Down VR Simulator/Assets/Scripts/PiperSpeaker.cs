@@ -47,4 +47,13 @@ public class PiperSpeaker : MonoBehaviour
             audioSource.Play();
         }
     }
+
+    public void Stop()
+    {
+        var audioSource = GetComponent<AudioSource>();
+        if (audioSource != null && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+    }
 }
