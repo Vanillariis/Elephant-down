@@ -12,5 +12,9 @@ public class VoicePipelineConnector : MonoBehaviour
         recorder.OnRecordingFinished += whisper.Transcribe;
         whisper.OnTranscriptionReady += ollama.GenerateResponse;
         ollama.OnResponseReady += piper.Speak;
+
+        // Generate intro through LLM...
+        ollama.GenerateResponse("Introduce yourself briefly.");
+        // ... Or piper.Speak("I am an elephant. You may speak.");
     }
 }
