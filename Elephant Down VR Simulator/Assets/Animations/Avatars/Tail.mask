@@ -1,0 +1,286 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Tail
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Camera
+    m_Weight: 0
+  - m_Path: Icosphere
+    m_Weight: 0
+  - m_Path: Light
+    m_Weight: 0
+  - m_Path: Object_9
+    m_Weight: 0
+  - m_Path: Sketchfab_model
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/ClingTransform_0109
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigLBLeg1_04
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigLBLeg1_04/RigLBLeg2_05
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigLBLeg1_04/RigLBLeg2_05/RigLBLegAnkle_06
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigLBLeg1_04/RigLBLeg2_05/RigLBLegAnkle_06/RigLBLegDigit11_07
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigLBLeg1_04/RigLBLeg2_05/RigLBLegAnkle_06/RigLBLegDigit11_07/RigLBLegDigit12_08
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigLBLeg1_04/RigLBLeg2_05/RigLBLegAnkle_06/RigLBLegDigit21_09
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigLBLeg1_04/RigLBLeg2_05/RigLBLegAnkle_06/RigLBLegDigit21_09/RigLBLegDigit22_010
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigLBLeg1_04/RigLBLeg2_05/RigLBLegAnkle_06/RigLBLegDigit31_011
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigLBLeg1_04/RigLBLeg2_05/RigLBLegAnkle_06/RigLBLegDigit31_011/RigLBLegDigit32_012
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigRBLeg1_013
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigRBLeg1_013/RigRBLeg2_014
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigRBLeg1_013/RigRBLeg2_014/RigRBLegAnkle_015
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigRBLeg1_013/RigRBLeg2_014/RigRBLegAnkle_015/RigRBLegDigit11_016
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigRBLeg1_013/RigRBLeg2_014/RigRBLegAnkle_015/RigRBLegDigit11_016/RigRBLegDigit12_017
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigRBLeg1_013/RigRBLeg2_014/RigRBLegAnkle_015/RigRBLegDigit21_018
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigRBLeg1_013/RigRBLeg2_014/RigRBLegAnkle_015/RigRBLegDigit21_018/RigRBLegDigit22_019
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigRBLeg1_013/RigRBLeg2_014/RigRBLegAnkle_015/RigRBLegDigit31_020
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigRBLeg1_013/RigRBLeg2_014/RigRBLegAnkle_015/RigRBLegDigit31_020/RigRBLegDigit32_021
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigLFLegCollarbone_026
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigLFLegCollarbone_026/RigLFLeg1_00
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigLFLegCollarbone_026/RigLFLeg1_00/RigLFLeg2_01
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigLFLegCollarbone_026/RigLFLeg1_00/RigLFLeg2_01/RigLFLegAnkle_027
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigLFLegCollarbone_026/RigLFLeg1_00/RigLFLeg2_01/RigLFLegAnkle_027/RigLFLegDigit11_028
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigLFLegCollarbone_026/RigLFLeg1_00/RigLFLeg2_01/RigLFLegAnkle_027/RigLFLegDigit11_028/RigLFLegDigit12_029
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigLFLegCollarbone_026/RigLFLeg1_00/RigLFLeg2_01/RigLFLegAnkle_027/RigLFLegDigit21_030
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigLFLegCollarbone_026/RigLFLeg1_00/RigLFLeg2_01/RigLFLegAnkle_027/RigLFLegDigit21_030/RigLFLegDigit22_031
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigLFLegCollarbone_026/RigLFLeg1_00/RigLFLeg2_01/RigLFLegAnkle_027/RigLFLegDigit31_032
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigLFLegCollarbone_026/RigLFLeg1_00/RigLFLeg2_01/RigLFLegAnkle_027/RigLFLegDigit31_032/RigLFLegDigit32_033
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigLFLegCollarbone_026/RigLFLeg1_00/RigLFLeg2_01/RigLFLegAnkle_027/RigLFLegDigit41_034
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigLFLegCollarbone_026/RigLFLeg1_00/RigLFLeg2_01/RigLFLegAnkle_027/RigLFLegDigit41_034/RigLFLegDigit42_035
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigLShoulderBlade_036
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigJaw1_040
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigJaw1_040/RigJaw2_041
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigJaw1_040/RigJaw2_041/RigJaw3_042
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigLEarRoot1_043
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigLEarRoot1_043/RigLEarBottom1_044
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigLEarRoot1_043/RigLEarBottom1_044/RigLEarBottom2_045
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigLEarRoot1_043/RigLEarBottom1_044/RigLEarBottom2_045/RigLEarBottom3_046
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigLEarRoot1_043/RigLEarMid1_047
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigLEarRoot1_043/RigLEarMid1_047/RigLEarMid2_048
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigLEarRoot1_043/RigLEarMid1_047/RigLEarMid2_048/RigLEarMid3_049
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigLEarRoot1_043/RigLEarTop1_050
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigLEarRoot1_043/RigLEarTop1_050/RigLEarTop2_051
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigLEarRoot1_043/RigLEarTop1_050/RigLEarTop2_051/RigLEarTop3_052
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigLEye1_053
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigLEyelid1_054
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigLEyelid3rd1_055
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigREarRoot1_056
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigREarRoot1_056/RigREarBottom1_057
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigREarRoot1_056/RigREarBottom1_057/RigREarBottom2_058
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigREarRoot1_056/RigREarBottom1_057/RigREarBottom2_058/RigREarBottom3_059
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigREarRoot1_056/RigREarMid1_060
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigREarRoot1_056/RigREarMid1_060/RigREarMid2_061
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigREarRoot1_056/RigREarMid1_060/RigREarMid2_061/RigREarMid3_062
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigREarRoot1_056/RigREarTop1_063
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigREarRoot1_056/RigREarTop1_063/RigREarTop2_064
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigREarRoot1_056/RigREarTop1_063/RigREarTop2_064/RigREarTop3_065
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigREye1_066
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigREyelid1_067
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigREyelid3rd1_068
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigTongue1_069
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigTongue1_069/RigTongue2_070
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigTongue1_069/RigTongue2_070/RigTongue3_071
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigTrunk1_072
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigTrunk1_072/RigTrunk2_073
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigTrunk1_072/RigTrunk2_073/RigTrunk3_074
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigTrunk1_072/RigTrunk2_073/RigTrunk3_074/RigTrunk4_075
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigTrunk1_072/RigTrunk2_073/RigTrunk3_074/RigTrunk4_075/RigTrunk5_076
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigTrunk1_072/RigTrunk2_073/RigTrunk3_074/RigTrunk4_075/RigTrunk5_076/RigTrunk6_077
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigTrunk1_072/RigTrunk2_073/RigTrunk3_074/RigTrunk4_075/RigTrunk5_076/RigTrunk6_077/RigTrunk7_078
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigTrunk1_072/RigTrunk2_073/RigTrunk3_074/RigTrunk4_075/RigTrunk5_076/RigTrunk6_077/RigTrunk7_078/RigTrunk8_079
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigTrunk1_072/RigTrunk2_073/RigTrunk3_074/RigTrunk4_075/RigTrunk5_076/RigTrunk6_077/RigTrunk7_078/RigTrunk8_079/RigTrunk9_080
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigTrunk1_072/RigTrunk2_073/RigTrunk3_074/RigTrunk4_075/RigTrunk5_076/RigTrunk6_077/RigTrunk7_078/RigTrunk8_079/RigTrunk9_080/RigTrunk10_081
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigTrunk1_072/RigTrunk2_073/RigTrunk3_074/RigTrunk4_075/RigTrunk5_076/RigTrunk6_077/RigTrunk7_078/RigTrunk8_079/RigTrunk9_080/RigTrunk10_081/RigTrunk11_082
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigTrunk1_072/RigTrunk2_073/RigTrunk3_074/RigTrunk4_075/RigTrunk5_076/RigTrunk6_077/RigTrunk7_078/RigTrunk8_079/RigTrunk9_080/RigTrunk10_081/RigTrunk11_082/RigTrunk12_083
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigTrunk1_072/RigTrunk2_073/RigTrunk3_074/RigTrunk4_075/RigTrunk5_076/RigTrunk6_077/RigTrunk7_078/RigTrunk8_079/RigTrunk9_080/RigTrunk10_081/RigTrunk11_082/RigTrunk12_083/RigTrunkLipB1_084
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigTrunk1_072/RigTrunk2_073/RigTrunk3_074/RigTrunk4_075/RigTrunk5_076/RigTrunk6_077/RigTrunk7_078/RigTrunk8_079/RigTrunk9_080/RigTrunk10_081/RigTrunk11_082/RigTrunk12_083/RigTrunkLipB1_084/RigTrunkLipB2_085
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigTrunk1_072/RigTrunk2_073/RigTrunk3_074/RigTrunk4_075/RigTrunk5_076/RigTrunk6_077/RigTrunk7_078/RigTrunk8_079/RigTrunk9_080/RigTrunk10_081/RigTrunk11_082/RigTrunk12_083/RigTrunkLipF1_086
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigNeck1_037/RigNeck2_038/RigHead_039/RigTrunk1_072/RigTrunk2_073/RigTrunk3_074/RigTrunk4_075/RigTrunk5_076/RigTrunk6_077/RigTrunk7_078/RigTrunk8_079/RigTrunk9_080/RigTrunk10_081/RigTrunk11_082/RigTrunk12_083/RigTrunkLipF1_086/RigTrunkLipF2_087
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigRFLegCollarbone_088
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigRFLegCollarbone_088/RigRFLeg1_089
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigRFLegCollarbone_088/RigRFLeg1_089/RigRFLeg2_090
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigRFLegCollarbone_088/RigRFLeg1_089/RigRFLeg2_090/RigRFLegAnkle_091
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigRFLegCollarbone_088/RigRFLeg1_089/RigRFLeg2_090/RigRFLegAnkle_091/RigRFLegDigit11_092
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigRFLegCollarbone_088/RigRFLeg1_089/RigRFLeg2_090/RigRFLegAnkle_091/RigRFLegDigit11_092/RigRFLegDigit12_093
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigRFLegCollarbone_088/RigRFLeg1_089/RigRFLeg2_090/RigRFLegAnkle_091/RigRFLegDigit21_094
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigRFLegCollarbone_088/RigRFLeg1_089/RigRFLeg2_090/RigRFLegAnkle_091/RigRFLegDigit21_094/RigRFLegDigit22_095
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigRFLegCollarbone_088/RigRFLeg1_089/RigRFLeg2_090/RigRFLegAnkle_091/RigRFLegDigit31_096
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigRFLegCollarbone_088/RigRFLeg1_089/RigRFLeg2_090/RigRFLegAnkle_091/RigRFLegDigit31_096/RigRFLegDigit32_097
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigRFLegCollarbone_088/RigRFLeg1_089/RigRFLeg2_090/RigRFLegAnkle_091/RigRFLegDigit41_098
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigRFLegCollarbone_088/RigRFLeg1_089/RigRFLeg2_090/RigRFLegAnkle_091/RigRFLegDigit41_098/RigRFLegDigit42_099
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigSpine1_022/RigSpine2_023/RigSpine3_024/RigChest_025/RigRShoulderBlade_0100
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigTail1_0101
+    m_Weight: 1
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigTail1_0101/RigTail2_0102
+    m_Weight: 1
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigTail1_0101/RigTail2_0102/RigTail3_0103
+    m_Weight: 1
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigTail1_0101/RigTail2_0102/RigTail3_0103/RigTail4_0104
+    m_Weight: 1
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigTail1_0101/RigTail2_0102/RigTail3_0103/RigTail4_0104/RigTail5_0105
+    m_Weight: 1
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigTail1_0101/RigTail2_0102/RigTail3_0103/RigTail4_0104/RigTail5_0105/RigTail6_0106
+    m_Weight: 1
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigTail1_0101/RigTail2_0102/RigTail3_0103/RigTail4_0104/RigTail5_0105/RigTail6_0106/RigTail7_0107
+    m_Weight: 1
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/_rootJoint/RigRoot_02/RigPelvis_03/RigTail1_0101/RigTail2_0102/RigTail3_0103/RigTail4_0104/RigTail5_0105/RigTail6_0106/RigTail7_0107/RigTail8_0108
+    m_Weight: 1
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/AfricanElephant_M_LOD2
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/GrounderRoot
+      (1)
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/GrounderRoot
+      (1)/IK_BackLeftLeg
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/GrounderRoot
+      (1)/IK_BackRightLeg
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/GrounderRoot
+      (1)/IK_FrontLeftLeg
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/GrounderRoot
+      (1)/IK_FrontRightLeg
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/Object_8
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/PounceTarget1
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/PounceTarget2
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/PounceTarget3
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/PounceTarget4
+    m_Weight: 0
+  - m_Path: Sketchfab_model/AfricanElephant_M_Gameready.fbx/Object_2/RootNode/04_Elephant/AfricanElephant_M_Gameready/Object_6/PounceTarget5
+    m_Weight: 0
