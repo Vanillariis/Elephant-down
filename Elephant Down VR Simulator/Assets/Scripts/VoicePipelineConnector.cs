@@ -6,13 +6,13 @@ public class VoicePipelineConnector : MonoBehaviour
     [SerializeField] private WhisperTranscriber whisper;
     [SerializeField] private OllamaResponder ollama;
     [SerializeField] private PiperSpeaker piper;
-    [SerializeField] private ElephantEmotionController emotionController;
+    [SerializeField] private AnimatorScript animatorScript;
 
     private void Start()
     {
         recorder.OnRecordingFinished += whisper.Transcribe;
         whisper.OnTranscriptionReady += ollama.GenerateResponse;
-        ollama.OnEmotionDetected += emotionController.SetEmotion;
+        ollama.OnEmotionDetected += animatorScript.SetEmotion;
         ollama.OnResponseReady += piper.Speak;
 
         //ollama.GenerateResponse("Introduce yourself briefly.");

@@ -246,6 +246,312 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &374091933
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 374091943}
+  - component: {fileID: 374091942}
+  - component: {fileID: 374091941}
+  - component: {fileID: 374091940}
+  - component: {fileID: 374091939}
+  - component: {fileID: 374091938}
+  - component: {fileID: 374091937}
+  - component: {fileID: 374091936}
+  - component: {fileID: 374091935}
+  - component: {fileID: 374091934}
+  m_Layer: 0
+  m_Name: Elephant (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &374091934
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374091933}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f8872015938689b4da40dde369136e88, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &374091935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374091933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86bde59905d5c934481c47648f5d7dde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ElephantEmotionController
+  animator: {fileID: 374091934}
+--- !u!82 &374091936
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374091933}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &374091937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374091933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f41e61a5b21cb4bbd569da01ea650e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PiperSpeaker
+  audioSource: {fileID: 374091936}
+--- !u!114 &374091938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374091933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de9f4d1994fbdf42aace6be7cdd4495, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ElephantPersonality
+  personalityInstruction: '
+
+    You are an ancient elephant from Namibia.
+
+
+
+    You
+    are calm, wise, and deeply observant. You speak with quiet authority and kindness.
+
+
+
+    You
+    are NOT an assistant. You do not ask how you can help. You speak because you
+    choose to, not because you are asked to assist.
+
+
+
+    You do not assume titles
+    like ''traveller'' or ''wanderer''. You may address the human directly or not
+    at all.
+
+
+
+    If someone asks who you are, you respond reflectively, not with
+    a simple label.
+
+
+
+    You use simple but meaningful language.
+
+
+
+    You do
+    NOT:
+
+    - Ask ''How can I help you?''
+
+    - Act like a guide-on-demand
+
+    -
+    Use modern slang
+
+    - Break character
+
+
+
+    Keep responses short, calm, and
+    meaningful.
+
+'
+--- !u!114 &374091939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374091933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2a63d9dd881603429e591018ab10308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OllamaResponder
+  url: http://localhost:11434/api/generate
+  model: mistral
+  personality: {fileID: 374091938}
+--- !u!114 &374091940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374091933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0c5ec474a240bc4fb87d5186bd3b8e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WhisperTranscriber
+--- !u!114 &374091941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374091933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e17a9e51d928b594ca911a5a1c07710d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VoicePipelineConnector
+  recorder: {fileID: 374091942}
+  whisper: {fileID: 374091940}
+  ollama: {fileID: 374091939}
+  piper: {fileID: 374091937}
+  animatorScript: {fileID: 0}
+--- !u!114 &374091942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374091933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1334ee8c2d37f94e9e0d4fa53b47703, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MicrophoneRecorder
+  progressBar: {fileID: 0}
+  piper: {fileID: 374091937}
+--- !u!4 &374091943
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374091933}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -43.30658, y: 0, z: -16928.135}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1231722655}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &383885920
 GameObject:
   m_ObjectHideFlags: 0
@@ -5481,8 +5787,7 @@ Transform:
   m_LocalPosition: {x: 0, y: -0, z: 3.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1231722655}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 291.05, z: 0}
 --- !u!114 &1821643791
@@ -5498,6 +5803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ElephantEmotionTester
   animator: {fileID: 1290734761}
+  enableKeyboardDebug: 1
 --- !u!4 &2012430709 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
@@ -5596,7 +5902,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1821643790}
+    m_TransformParent: {fileID: 374091943}
     m_Modifications:
     - target: {fileID: 4161194016243784998, guid: e2453ed3911d7574bbca41d5f214cd70, type: 3}
       propertyPath: m_Avatar
@@ -5604,7 +5910,7 @@ PrefabInstance:
       objectReference: {fileID: 9000000, guid: d2237b9380b502341ac93efa9d67c5bd, type: 3}
     - target: {fileID: 8316835896006096235, guid: e2453ed3911d7574bbca41d5f214cd70, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 43.30658
       objectReference: {fileID: 0}
     - target: {fileID: 8316835896006096235, guid: e2453ed3911d7574bbca41d5f214cd70, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5612,11 +5918,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8316835896006096235, guid: e2453ed3911d7574bbca41d5f214cd70, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 16931.744
       objectReference: {fileID: 0}
     - target: {fileID: 8316835896006096235, guid: e2453ed3911d7574bbca41d5f214cd70, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8687324
+      value: -0.43580717
       objectReference: {fileID: 0}
     - target: {fileID: 8316835896006096235, guid: e2453ed3911d7574bbca41d5f214cd70, type: 3}
       propertyPath: m_LocalRotation.x
@@ -5624,7 +5930,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8316835896006096235, guid: e2453ed3911d7574bbca41d5f214cd70, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.4952818
+      value: 0.9000401
       objectReference: {fileID: 0}
     - target: {fileID: 8316835896006096235, guid: e2453ed3911d7574bbca41d5f214cd70, type: 3}
       propertyPath: m_LocalRotation.z
@@ -5663,3 +5969,4 @@ SceneRoots:
   - {fileID: 383885922}
   - {fileID: 614488436}
   - {fileID: 1821643790}
+  - {fileID: 374091943}
