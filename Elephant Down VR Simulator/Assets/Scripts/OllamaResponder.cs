@@ -14,6 +14,7 @@ public class OllamaResponder : MonoBehaviour
 
     public Action<string> OnResponseReady;
     public Action<string> OnPartialResponse;
+    public Action<string> OnEmotionDetected;
 
     private static HttpClient client = new HttpClient();
 
@@ -45,8 +46,25 @@ public class OllamaResponder : MonoBehaviour
                 fullResponse.Append(parsed.response);
                 OnPartialResponse?.Invoke(fullResponse.ToString());
             }
-            // Final callback for compatibility
-            OnResponseReady?.Invoke(fullResponse.ToString());
+            
+
+            string finalText = fullResponse.ToString();
+
+            // Extract emotion
+            string emotion = "neutral";
+
+            var match = System.Text.RegularExpressions.Regex.Match(finalText, @"\[EMOTION:\s*(.*?)\]");
+            if (match.Success)
+            {
+                emotion = match.Groups[1].Value.ToLower();
+            }
+
+            // Remove tag from text before speaking
+            string cleanedText = System.Text.RegularExpressions.Regex.Replace(finalText, @"\[EMOTION:.*?\]", "").Trim();
+
+            // Send emotion + cleaned text
+            OnEmotionDetected?.Invoke(emotion);
+            OnResponseReady?.Invoke(cleanedText);
         }
     }
 

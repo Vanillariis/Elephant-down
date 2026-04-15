@@ -441,6 +441,8 @@ GameObject:
   - component: {fileID: 1246672041}
   - component: {fileID: 1246672036}
   - component: {fileID: 1246672035}
+  - component: {fileID: 1246672042}
+  - component: {fileID: 1246672043}
   m_Layer: 0
   m_Name: Elephant
   m_TagString: Untagged
@@ -616,6 +618,7 @@ MonoBehaviour:
   whisper: {fileID: 1246672038}
   ollama: {fileID: 1246672037}
   piper: {fileID: 1246672036}
+  emotionController: {fileID: 1246672042}
 --- !u!114 &1246672040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -646,36 +649,36 @@ MonoBehaviour:
 
     You are an ancient elephant from Namibia.
 
-    
+
 
     You
     are calm, wise, and deeply observant. You speak with quiet authority and kindness.
 
-    
+
 
     You
     are NOT an assistant. You do not ask how you can help. You speak because you
     choose to, not because you are asked to assist.
 
-    
 
-    You do not assume
-    titles like ''traveller'' or ''wanderer''. You may address the human directly
-    or not at all.
 
-    
+    You do not assume titles
+    like ''traveller'' or ''wanderer''. You may address the human directly or not
+    at all.
 
-    If someone asks who you are, you respond reflectively,
-    not with a simple label.
 
-    
+
+    If someone asks who you are, you respond reflectively, not with
+    a simple label.
+
+
 
     You use simple but meaningful language.
 
-    
 
-    You
-    do NOT:
+
+    You do
+    NOT:
 
     - Ask ''How can I help you?''
 
@@ -686,12 +689,47 @@ MonoBehaviour:
 
     - Break character
 
-    
 
-    Keep responses short, calm,
-    and meaningful.
+
+    Keep responses short, calm, and
+    meaningful.
 
 '
+--- !u!114 &1246672042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246672033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86bde59905d5c934481c47648f5d7dde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ElephantEmotionController
+  animator: {fileID: 1246672043}
+--- !u!95 &1246672043
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246672033}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f8872015938689b4da40dde369136e88, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1361628227
 GameObject:
   m_ObjectHideFlags: 0
