@@ -3,27 +3,27 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using UnityEngine.Networking;
 using System.Collections;
+using System.IO;
 
 public class PiperSpeaker : MonoBehaviour
 {
-    //[SerializeField] private string piperPath;
-    //[SerializeField] private string modelPath;
-
-    private const string piperPath = "C:/Users/anita/Downloads/piper_windows_amd64/piper/piper.exe";
-    private const string PiperModel = "C:/Users/anita/Downloads/piper_windows_amd64/piper/models/en_US-joe-medium.onnx";
-
     [SerializeField] private AudioSource audioSource;
 
     public async void Speak(string text)
     {
-        string output = Application.persistentDataPath + "/response.wav";
+        string output = Path.Combine(Application.persistentDataPath, "response.wav");
+
+        // Build paths at runtime (THIS is the key fix)
+        string basePath = Path.Combine(Application.streamingAssetsPath, "piper");
+        string exePath = Path.Combine(basePath, "piper.exe");
+        string modelPath = Path.Combine(basePath, "en_US-joe-medium.onnx");
 
         await Task.Run(() =>
         {
             using (Process p = new Process())
             {
-                p.StartInfo.FileName = piperPath;
-                p.StartInfo.Arguments = $"--model \"{PiperModel}\" --output_file \"{output}\"";
+                p.StartInfo.FileName = exePath;
+                p.StartInfo.Arguments = $"--model \"{modelPath}\" --output_file \"{output}\"";
                 p.StartInfo.RedirectStandardInput = true;
                 p.StartInfo.UseShellExecute = false;
                 p.StartInfo.CreateNoWindow = true;
@@ -50,7 +50,6 @@ public class PiperSpeaker : MonoBehaviour
 
     public void Stop()
     {
-        var audioSource = GetComponent<AudioSource>();
         if (audioSource != null && audioSource.isPlaying)
         {
             audioSource.Stop();
