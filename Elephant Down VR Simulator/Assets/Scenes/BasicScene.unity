@@ -264,6 +264,7 @@ GameObject:
   - component: {fileID: 374091936}
   - component: {fileID: 374091935}
   - component: {fileID: 374091934}
+  - component: {fileID: 374091944}
   m_Layer: 0
   m_Name: Elephant (1)
   m_TagString: Untagged
@@ -521,7 +522,7 @@ MonoBehaviour:
   whisper: {fileID: 374091940}
   ollama: {fileID: 374091939}
   piper: {fileID: 374091937}
-  animatorScript: {fileID: 0}
+  animatorScript: {fileID: 374091944}
 --- !u!114 &374091942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -552,6 +553,20 @@ Transform:
   - {fileID: 1231722655}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &374091944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374091933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191c98c98cf24104ab7a0e0bcdaf3619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimatorScript
+  animator: {fileID: 0}
+  enableKeyboardDebug: 1
 --- !u!1 &383885920
 GameObject:
   m_ObjectHideFlags: 0

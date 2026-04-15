@@ -53,6 +53,8 @@ public class AnimatorScript : MonoBehaviour
 
     public void SetEmotion(string emotion)
     {
+        Debug.Log("EMOTION RECEIVED IN ANIMATOR: " + emotion);
+
         if (string.IsNullOrWhiteSpace(emotion))
         {
             SetMood(Mood.Neutral);

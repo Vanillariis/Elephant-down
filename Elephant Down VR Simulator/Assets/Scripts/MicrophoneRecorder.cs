@@ -7,7 +7,7 @@ public class MicrophoneRecorder : MonoBehaviour
 {
     [Header("Microphone")]
     //[SerializeField] private Dropdown dropdown;
-    [SerializeField] private Image progressBar;
+    //[SerializeField] private Image progressBar;
     [SerializeField] private PiperSpeaker piper;
 
     public Action<AudioClip> OnRecordingFinished;
@@ -44,7 +44,7 @@ public class MicrophoneRecorder : MonoBehaviour
 
         OnRecordingFinished?.Invoke(clip);
 
-        progressBar.fillAmount = 0;
+        //progressBar.fillAmount = 0;
     }
 
     private void Update()
@@ -69,7 +69,7 @@ public class MicrophoneRecorder : MonoBehaviour
         if (recording)
         {
             // Optional: simple visual feedback while holding
-            progressBar.fillAmount = Mathf.PingPong(Time.time, 1f);
+            //progressBar.fillAmount = Mathf.PingPong(Time.time, 1f);
         }
     }
 }

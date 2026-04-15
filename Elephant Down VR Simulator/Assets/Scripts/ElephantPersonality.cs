@@ -31,9 +31,12 @@ public class ElephantPersonality : MonoBehaviour
 
     Valid emotions are: happy, sad, angry, neutral.
 
-    Format:
+    FORMAT (STRICT):
+    First line MUST be:
     [EMOTION: <emotion>]
-    <your response>
+
+    Second line:
+    Your response
 
     Example:
     [EMOTION: happy]
