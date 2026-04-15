@@ -8,12 +8,11 @@ public class OllamaResponder : MonoBehaviour
 {
     [Header("Ollama Settings")]
     [SerializeField] private string url = "http://localhost:11434/api/generate";
-    [SerializeField] private string model = "mistral"; // Maybe change to LLama 3.1
+    [SerializeField] private string model = "mistral";
     
     [SerializeField] private ElephantPersonality personality;
 
     public Action<string> OnResponseReady;
-    public Action<string> OnPartialResponse;
     public Action<string> OnEmotionDetected;
 
     private static HttpClient client = new HttpClient();
@@ -26,51 +25,71 @@ public class OllamaResponder : MonoBehaviour
         {
             model = model,
             prompt = engineeredPrompt,
-            stream = true
+            stream = false
         });
 
         var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-        var request = new HttpRequestMessage(HttpMethod.Post, url) { Content = content };
-        var response = await client.SendAsync(request, HttpCompletionOption.ResponseHeadersRead);
-        using (var stream = await response.Content.ReadAsStreamAsync())
-        using (var reader = new System.IO.StreamReader(stream))
+        try
         {
-            string line;
-            StringBuilder fullResponse = new StringBuilder();
-            while ((line = await reader.ReadLineAsync()) != null)
-            {
-                if (string.IsNullOrWhiteSpace(line)) continue;
-                // Each line is a JSON object with a partial response
-                var parsed = JsonUtility.FromJson<Response>(line);
-                fullResponse.Append(parsed.response);
-                OnPartialResponse?.Invoke(fullResponse.ToString());
-            }
-            
+            var response = await client.PostAsync(url, content);
+            response.EnsureSuccessStatusCode();
 
-            string finalText = fullResponse.ToString();
+            string result = await response.Content.ReadAsStringAsync();
+
+            var parsed = JsonUtility.FromJson<Response>(result);
+
+            string finalText = parsed.response;
+
+            Debug.Log("RAW LLM OUTPUT: " + finalText);
 
             // Extract emotion
             string emotion = "neutral";
-
             var match = System.Text.RegularExpressions.Regex.Match(finalText, @"\[EMOTION:\s*(.*?)\]");
             if (match.Success)
             {
                 emotion = match.Groups[1].Value.ToLower();
             }
 
-            // Remove tag from text before speaking
-            string cleanedText = System.Text.RegularExpressions.Regex.Replace(finalText, @"\[EMOTION:.*?\]", "").Trim();
+            // Clean text
+            string cleanedText = finalText;
 
-            // Send emotion + cleaned text
+            // Remove emotion tag
+            cleanedText = System.Text.RegularExpressions.Regex
+                .Replace(cleanedText, @"\[EMOTION:.*?\]", "");
+
+            // Remove timestamps
+            cleanedText = System.Text.RegularExpressions.Regex
+                .Replace(cleanedText, @"\[\d{2}:\d{2}:\d{2}.*?\]", "");
+
+            // Final trim
+            cleanedText = cleanedText.Trim();
+
+            Debug.Log("CLEANED TEXT: " + cleanedText);
+
+            Debug.Log("TEXT SENT TO PIPER: >>>" + cleanedText + "<<<");
+
             OnEmotionDetected?.Invoke(emotion);
             OnResponseReady?.Invoke(cleanedText);
+
+        }
+        catch (Exception e)
+        {
+            Debug.LogError("Ollama error: " + e.Message);
         }
     }
 
     [Serializable]
-    class Request { public string model; public string prompt; public bool stream; }
+    class Request
+    {
+        public string model;
+        public string prompt;
+        public bool stream;
+    }
 
     [Serializable]
-    class Response { public string response; }
+    class Response
+    {
+        public string response;
+    }
 }
