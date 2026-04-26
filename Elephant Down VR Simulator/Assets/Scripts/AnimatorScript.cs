@@ -53,8 +53,14 @@ public class AnimatorScript : MonoBehaviour
 
     public void SetEmotion(string emotion)
     {
-        Debug.Log("EMOTION RECEIVED IN ANIMATOR: " + emotion);
 
+        
+
+        if (string.IsNullOrWhiteSpace(emotion))
+        {
+            SetMood(Mood.Neutral);
+            return;
+        }
         if (string.IsNullOrWhiteSpace(emotion))
         {
             SetMood(Mood.Neutral);
@@ -84,12 +90,7 @@ public class AnimatorScript : MonoBehaviour
 
     public void SetMood(Mood mood)
     {
-        if (animator == null)
-        {
-            Debug.LogWarning("AnimatorScript: Animator is null.");
-            return;
-        }
-
+       
         animator.SetBool(NeutralHash, false);
         animator.SetBool(HappyHash, false);
         animator.SetBool(AngryHash, false);
