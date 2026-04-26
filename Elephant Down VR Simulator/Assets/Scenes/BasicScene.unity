@@ -263,8 +263,6 @@ GameObject:
   - component: {fileID: 374091937}
   - component: {fileID: 374091936}
   - component: {fileID: 374091935}
-  - component: {fileID: 374091934}
-  - component: {fileID: 374091944}
   m_Layer: 0
   m_Name: Elephant (1)
   m_TagString: Untagged
@@ -272,28 +270,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &374091934
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 374091933}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f8872015938689b4da40dde369136e88, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &374091935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,7 +282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86bde59905d5c934481c47648f5d7dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ElephantEmotionController
-  animator: {fileID: 374091934}
+  animator: {fileID: 1290734761}
 --- !u!82 &374091936
 AudioSource:
   m_ObjectHideFlags: 0
@@ -492,7 +468,7 @@ MonoBehaviour:
   whisper: {fileID: 374091940}
   ollama: {fileID: 374091939}
   piper: {fileID: 374091937}
-  animatorScript: {fileID: 374091944}
+  animatorScript: {fileID: 1821643791}
 --- !u!114 &374091942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -522,20 +498,6 @@ Transform:
   - {fileID: 1231722655}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &374091944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 374091933}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 191c98c98cf24104ab7a0e0bcdaf3619, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AnimatorScript
-  animator: {fileID: 374091934}
-  enableKeyboardDebug: 1
 --- !u!1 &383885920
 GameObject:
   m_ObjectHideFlags: 0
