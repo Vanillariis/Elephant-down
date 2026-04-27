@@ -262,6 +262,7 @@ GameObject:
   - component: {fileID: 374091938}
   - component: {fileID: 374091937}
   - component: {fileID: 374091936}
+  - component: {fileID: 374091945}
   - component: {fileID: 374091935}
   - component: {fileID: 374091934}
   - component: {fileID: 374091944}
@@ -321,7 +322,7 @@ AudioSource:
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 0.9
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -535,7 +536,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1334ee8c2d37f94e9e0d4fa53b47703, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MicrophoneRecorder
-  progressBar: {fileID: 0}
   piper: {fileID: 374091937}
 --- !u!4 &374091943
 Transform:
@@ -567,6 +567,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AnimatorScript
   animator: {fileID: 0}
   enableKeyboardDebug: 1
+--- !u!168 &374091945
+AudioEchoFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374091933}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Delay: 300
+  m_DecayRatio: 0.5
+  m_WetMix: 1
+  m_DryMix: 0.2
 --- !u!1 &383885920
 GameObject:
   m_ObjectHideFlags: 0
