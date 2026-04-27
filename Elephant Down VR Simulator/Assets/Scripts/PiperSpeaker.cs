@@ -15,7 +15,7 @@ public class PiperSpeaker : MonoBehaviour
 
         string basePath = Path.Combine(Application.streamingAssetsPath, "piper");
         string exePath = Path.Combine(basePath, "piper.exe");
-        string modelPath = Path.Combine(basePath, "models/en_US-joe-medium.onnx");
+        string modelPath = Path.Combine(basePath, "models/en_US-kristin-medium.onnx");
 
         UnityEngine.Debug.Log("Exe: " + exePath);
         UnityEngine.Debug.Log("Model: " + modelPath);
