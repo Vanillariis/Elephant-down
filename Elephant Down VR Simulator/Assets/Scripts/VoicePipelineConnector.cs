@@ -18,4 +18,21 @@ public class VoicePipelineConnector : MonoBehaviour
         //ollama.GenerateResponse("Introduce yourself briefly.");
         piper.Speak("I am an elephant. You may speak.");
     }
+    private void OnDestroy()
+    {
+        if (recorder != null && whisper != null)
+            recorder.OnRecordingFinished -= whisper.Transcribe;
+
+        if (whisper != null && ollama != null)
+            whisper.OnTranscriptionReady -= ollama.GenerateResponse;
+
+        if (ollama != null)
+        {
+            if (animatorScript != null)
+                ollama.OnEmotionDetected -= animatorScript.SetEmotion;
+
+            if (piper != null)
+                ollama.OnResponseReady -= piper.Speak;
+        }
+    }
 }
