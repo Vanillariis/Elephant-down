@@ -264,6 +264,8 @@ GameObject:
   - component: {fileID: 374091936}
   - component: {fileID: 374091945}
   - component: {fileID: 374091935}
+  - component: {fileID: 374091934}
+  - component: {fileID: 374091944}
   m_Layer: 0
   m_Name: Elephant (1)
   m_TagString: Untagged
@@ -271,6 +273,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &374091934
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374091933}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f8872015938689b4da40dde369136e88, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &374091935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,7 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86bde59905d5c934481c47648f5d7dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ElephantEmotionController
-  animator: {fileID: 1290734761}
+  animator: {fileID: 374091934}
 --- !u!82 &374091936
 AudioSource:
   m_ObjectHideFlags: 0
@@ -406,26 +430,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0de9f4d1994fbdf42aace6be7cdd4495, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ElephantPersonality
-  personalityInstruction: 'You are an elephant from Namibia.     You are calm, grounded,
-    and direct.      You are NOT an assistant.     You are NOT a guide.     You do
-    NOT ask how you can help.      Your response MUST always begin with exactly one
-    emotion tag.      VALID EMOTIONS:     - happy     - angry     - neutral     
-    EMOTION SELECTION RULES:     - Use [EMOTION: angry] if the human insults you,
-    mocks you, threatens you, is rude, calls you stupid, ugly, useless, bad, annoying,
-    or speaks aggressively.     - Use [EMOTION: happy] if the human is kind, friendly,
-    compliments you, thanks you, greets you warmly, or says something positive.    
-    - Use [EMOTION: neutral] only if the human is neither kind nor rude.      IMPORTANT:    
-    Do not default to neutral if the human clearly shows kindness or hostility.    
-    The emotion must be based on the human''s message, not your own personality.    
-    Even though you are calm, you can still feel angry or happy.      FORMAT RULES:    
-    The first line MUST be exactly:     [EMOTION: happy]     or     [EMOTION: angry]    
-    or     [EMOTION: neutral]      The second line is your short response.      Never
-    explain the emotion tag.     Never put the emotion tag anywhere except the first
-    line.     Never use sad.      EXAMPLES:      Human: You are stupid.     [EMOTION:
-    angry]     Do not speak to me like that.      Human: You are a good elephant.    
-    [EMOTION: happy]     That is kind of you.      Human: Hello.     [EMOTION: happy]    
-    Hello. I hear you.      Human: What are you doing?     [EMOTION: neutral]    
-    I am standing here.      Keep responses short and natural.     "'
+  personalityInstruction: '
+
+    You are an ancient elephant from Namibia.
+
+
+
+    You
+    are calm, wise, and deeply observant. You speak with quiet authority and kindness.
+
+
+
+    You
+    are NOT an assistant. You do not ask how you can help. You speak because you
+    choose to, not because you are asked to assist.
+
+
+
+    You do not assume titles
+    like ''traveller'' or ''wanderer''. You may address the human directly or not
+    at all.
+
+
+
+    If someone asks who you are, you respond reflectively, not with
+    a simple label.
+
+
+
+    You use simple but meaningful language.
+
+
+
+    You do
+    NOT:
+
+    - Ask ''How can I help you?''
+
+    - Act like a guide-on-demand
+
+    -
+    Use modern slang
+
+    - Break character
+
+
+
+    Keep responses short, calm, and
+    meaningful.
+
+'
 --- !u!114 &374091939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -469,7 +523,7 @@ MonoBehaviour:
   whisper: {fileID: 374091940}
   ollama: {fileID: 374091939}
   piper: {fileID: 374091937}
-  animatorScript: {fileID: 1821643791}
+  animatorScript: {fileID: 374091944}
 --- !u!114 &374091942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -499,6 +553,33 @@ Transform:
   - {fileID: 1231722655}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &374091944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374091933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191c98c98cf24104ab7a0e0bcdaf3619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimatorScript
+  animator: {fileID: 0}
+  enableKeyboardDebug: 1
+--- !u!168 &374091945
+AudioEchoFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374091933}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Delay: 300
+  m_DecayRatio: 0.5
+  m_WetMix: 1
+  m_DryMix: 0.2
 --- !u!1 &383885920
 GameObject:
   m_ObjectHideFlags: 0

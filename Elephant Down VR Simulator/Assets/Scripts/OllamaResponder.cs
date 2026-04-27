@@ -45,11 +45,7 @@ public class OllamaResponder : MonoBehaviour
 
             // Extract emotion
             string emotion = "neutral";
-            var match = System.Text.RegularExpressions.Regex.Match(
-                finalText,
-                @"\[EMOTION:\s*(happy|angry|neutral)\]",
-                System.Text.RegularExpressions.RegexOptions.IgnoreCase
-            );
+            var match = System.Text.RegularExpressions.Regex.Match(finalText, @"\[EMOTION:\s*(.*?)\]");
             if (match.Success)
             {
                 emotion = match.Groups[1].Value.ToLower();
@@ -59,12 +55,8 @@ public class OllamaResponder : MonoBehaviour
             string cleanedText = finalText;
 
             // Remove emotion tag
-            cleanedText = System.Text.RegularExpressions.Regex.Replace(
-                cleanedText,
-                @"\[EMOTION:\s*(happy|angry|neutral)\]",
-                "",
-                System.Text.RegularExpressions.RegexOptions.IgnoreCase
-            );
+            cleanedText = System.Text.RegularExpressions.Regex
+                .Replace(cleanedText, @"\[EMOTION:.*?\]", "");
 
             // Remove timestamps
             cleanedText = System.Text.RegularExpressions.Regex
@@ -73,7 +65,10 @@ public class OllamaResponder : MonoBehaviour
             // Final trim
             cleanedText = cleanedText.Trim();
 
-            
+            Debug.Log("CLEANED TEXT: " + cleanedText);
+
+            Debug.Log("TEXT SENT TO PIPER: >>>" + cleanedText + "<<<");
+
             OnEmotionDetected?.Invoke(emotion);
             OnResponseReady?.Invoke(cleanedText);
 
