@@ -16,7 +16,7 @@ public class FPSLogger : MonoBehaviour
 
     private List<string> logLines = new List<string>();
     private string filePath;
-    private static FPSLogger instance;
+    public static FPSLogger instance;
 
     void Awake()
     {
@@ -37,7 +37,7 @@ public class FPSLogger : MonoBehaviour
         string timestamp = System.DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss");
         filePath = Path.Combine(directoryPath, $"FPS_Log_{timestamp}.csv");
 
-        logLines.Add("Time (s),FPS,Scene");
+        logLines.Add("Time (s),FPS,Scene,Event,UserText,ElephantText,Emotion");
         logLines.Add($"0.00,Start,{SceneManager.GetActiveScene().name}");
 
         Debug.Log("FPS Logger Started. Saving to: " + filePath);
@@ -91,6 +91,17 @@ public class FPSLogger : MonoBehaviour
         {
             Debug.LogError("Failed to save log: " + e.Message);
         }
+    }
+
+    public void LogDialogue(string userText, string elephantText, string emotion)
+    {
+        float timeSinceStart = Time.time;
+
+        // Escape commas so CSV doesn't break
+        userText = userText.Replace(",", " ");
+        elephantText = elephantText.Replace(",", " ");
+
+        logLines.Add($"{timeSinceStart:F2},,,DIALOGUE,{userText},{elephantText},{emotion}");
     }
 
     void OnDestroy()
