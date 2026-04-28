@@ -71,6 +71,10 @@ public class OllamaResponder : MonoBehaviour
 
             OnEmotionDetected?.Invoke(emotion);
             OnResponseReady?.Invoke(cleanedText);
+            if (FPSLogger.instance != null)
+            {
+                FPSLogger.instance.LogDialogue(text, cleanedText, emotion);
+            }
 
         }
         catch (Exception e)
