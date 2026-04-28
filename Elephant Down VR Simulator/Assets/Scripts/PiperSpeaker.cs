@@ -11,24 +11,25 @@ public class PiperSpeaker : MonoBehaviour
 
     public async void Speak(string text)
     {
+        IsBusy = true;
+
         string output = Path.Combine(Application.persistentDataPath, "response.wav");
 
         string basePath = Path.Combine(Application.streamingAssetsPath, "piper");
         string exePath = Path.Combine(basePath, "piper.exe");
         string modelPath = Path.Combine(basePath, "models/en_US-kristin-medium.onnx");
 
-        UnityEngine.Debug.Log("Exe: " + exePath);
-        UnityEngine.Debug.Log("Model: " + modelPath);
-
         if (!File.Exists(exePath))
         {
             UnityEngine.Debug.LogError("piper.exe NOT FOUND");
+            IsBusy = false;
             return;
         }
 
         if (!File.Exists(modelPath))
         {
             UnityEngine.Debug.LogError("Model NOT FOUND");
+            IsBusy = false;
             return;
         }
 
@@ -47,18 +48,13 @@ public class PiperSpeaker : MonoBehaviour
                 p.StandardInput.WriteLine(text);
                 p.StandardInput.Close();
                 p.WaitForExit();
-
-                string error = p.StandardError.ReadToEnd();
-                if (!string.IsNullOrEmpty(error))
-                {
-                    UnityEngine.Debug.LogError("Piper error: " + error);
-                }
             }
         });
 
         if (!File.Exists(output))
         {
             UnityEngine.Debug.LogError("WAV file not created!");
+            IsBusy = false;
             return;
         }
 
@@ -70,9 +66,15 @@ public class PiperSpeaker : MonoBehaviour
         using (var req = UnityWebRequestMultimedia.GetAudioClip("file://" + path, AudioType.WAV))
         {
             yield return req.SendWebRequest();
+
             audioSource.clip = DownloadHandlerAudioClip.GetContent(req);
             audioSource.Play();
+
+            while (audioSource.isPlaying)
+                yield return null;
         }
+
+        IsBusy = false;
     }
 
     public void Stop()
@@ -83,6 +85,7 @@ public class PiperSpeaker : MonoBehaviour
         }
     }
     //--------------------
+    public bool IsBusy { get; private set; }
     public bool IsSpeaking
     {
         get

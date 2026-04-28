@@ -16,22 +16,25 @@ public class OllamaResponder : MonoBehaviour
     public Action<string> OnEmotionDetected;
 
     private static HttpClient client = new HttpClient();
+    public bool IsBusy { get; private set; }
 
     public async void GenerateResponse(string text)
     {
-        string engineeredPrompt = personality.BuildPrompt(text);
-
-        var json = JsonUtility.ToJson(new Request
-        {
-            model = model,
-            prompt = engineeredPrompt,
-            stream = false
-        });
-
-        var content = new StringContent(json, Encoding.UTF8, "application/json");
+        IsBusy = true;
 
         try
         {
+            string engineeredPrompt = personality.BuildPrompt(text);
+
+            var json = JsonUtility.ToJson(new Request
+            {
+                model = model,
+                prompt = engineeredPrompt,
+                stream = false
+            });
+
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
             var response = await client.PostAsync(url, content);
             response.EnsureSuccessStatusCode();
 
@@ -54,32 +57,32 @@ public class OllamaResponder : MonoBehaviour
             // Clean text
             string cleanedText = finalText;
 
-            // Remove emotion tag
             cleanedText = System.Text.RegularExpressions.Regex
                 .Replace(cleanedText, @"\[EMOTION:.*?\]", "");
 
-            // Remove timestamps
             cleanedText = System.Text.RegularExpressions.Regex
                 .Replace(cleanedText, @"\[\d{2}:\d{2}:\d{2}.*?\]", "");
 
-            // Final trim
             cleanedText = cleanedText.Trim();
 
             Debug.Log("CLEANED TEXT: " + cleanedText);
-
             Debug.Log("TEXT SENT TO PIPER: >>>" + cleanedText + "<<<");
 
             OnEmotionDetected?.Invoke(emotion);
             OnResponseReady?.Invoke(cleanedText);
+
             if (FPSLogger.instance != null)
             {
                 FPSLogger.instance.LogDialogue(text, cleanedText, emotion);
             }
-
         }
         catch (Exception e)
         {
             Debug.LogError("Ollama error: " + e.Message);
+        }
+        finally
+        {
+            IsBusy = false;
         }
     }
 

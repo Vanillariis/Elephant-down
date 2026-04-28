@@ -14,6 +14,9 @@ public class ElephantConversationTimer : MonoBehaviour
 
     [Header("Movement Settings")]
     [SerializeField] private float walkSpeed = 1.5f;
+    
+    [SerializeField] private WhisperTranscriber whisper;
+    [SerializeField] private OllamaResponder ollama;
 
     private bool endingStarted = false;
     private bool isWalkingAway = false;
@@ -42,27 +45,28 @@ public class ElephantConversationTimer : MonoBehaviour
 
         endingStarted = true;
 
-        // Stop new input, but do NOT interrupt current speech/recording
-        if (recorder != null)
-            recorder.enabled = false;
-
-        // Wait until the user has finished recording
+        // Wait if the user is currently talking
         while (recorder != null && recorder.IsRecording)
             yield return null;
 
-        // Wait until the elephant has finished its current spoken response
-        while (piper != null && piper.IsSpeaking)
+        if (recorder != null)
+            recorder.enabled = false;
+
+        while (whisper != null && whisper.IsBusy)
+            yield return null;
+
+        while (ollama != null && ollama.IsBusy)
+            yield return null;
+
+        while (piper != null && piper.IsBusy)
             yield return null;
 
         // Now play final goodbye line
         if (piper != null)
             piper.Speak("Thank you for your conversation, I must go find my herd.");
 
-        // Wait for final line to begin
-        yield return new WaitForSeconds(0.2f);
-
         // Wait for final line to finish
-        while (piper != null && piper.IsSpeaking)
+        while (piper != null && piper.IsBusy)
             yield return null;
 
         // Then walk away
