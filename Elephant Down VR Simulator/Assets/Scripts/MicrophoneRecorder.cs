@@ -72,4 +72,9 @@ public class MicrophoneRecorder : MonoBehaviour
             //progressBar.fillAmount = Mathf.PingPong(Time.time, 1f);
         }
     }
+    //---------------------------
+    public bool IsRecording
+    {
+        get { return recording; }
+    }
 }
