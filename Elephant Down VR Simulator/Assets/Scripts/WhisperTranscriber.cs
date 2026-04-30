@@ -8,8 +8,11 @@ using Debug = UnityEngine.Debug;
 public class WhisperTranscriber : MonoBehaviour
 {
 
-    private const string whisperPath = "E:/olive/Release/whisper-cli.exe";
-    private const string whisperModel = "E:/olive/whisper.cpp/models/ggml-base.en.bin";
+    // private const string whisperPath = "E:/olive/Release/whisper-cli.exe";
+    // private const string whisperModel = "E:/olive/whisper.cpp/models/ggml-base.en.bin";
+
+    private const string whisperPath = "C:/Users/anita/Downloads/whisper-bin-x64/Release/whisper-cli.exe";
+    private const string whisperModel = "C:/Users/anita/Downloads/whisper-bin-x64/Release/models/ggml-base.en.bin";
 
     public Action<string> OnTranscriptionReady;
     public bool IsBusy { get; private set; }
