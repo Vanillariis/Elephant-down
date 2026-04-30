@@ -27,6 +27,33 @@ public class ElephantLoader : MonoBehaviour
     public ElephantChunk[] chunks;
     public MiniLMEmbedder embedder;
 
+    public string CreateRagPrompt(string userQuestion)
+    {
+        if (embedder == null)
+        {
+            Debug.LogError("Embedder is not assigned!");
+            return userQuestion;
+        }
+
+        if (chunks == null || chunks.Length == 0)
+        {
+            Debug.LogError("Chunks not loaded!");
+            return userQuestion;
+        }
+
+        float[] queryEmbedding = embedder.GenerateEmbedding(userQuestion);
+
+        string context = GetTopKContext(queryEmbedding, 3);
+
+        string prompt = BuildRagPrompt(userQuestion, context);
+
+        Debug.Log("=== RAG PROMPT SENT TO LLM ===");
+        Debug.Log(prompt);
+
+        return prompt;
+    }
+    
+    
     float CosineSimilarity(float[] a, float[] b)
     {
         if (a == null || b == null || a.Length != b.Length)
@@ -115,8 +142,24 @@ public class ElephantLoader : MonoBehaviour
 
         return prompt;
     }
-
+    
     void Start()
+    {
+        if (jsonFile == null)
+        {
+            Debug.LogError("No JSON file assigned.");
+            return;
+        }
+
+        ElephantWrapper wrapper = JsonUtility.FromJson<ElephantWrapper>(jsonFile.text);
+        chunks = wrapper.items;
+
+        Debug.Log("RAG system loaded. Chunks: " + chunks.Length);
+    }
+    
+    
+    //FOR TESTING
+    /*void Start()
     {
         if (jsonFile == null)
         {
@@ -152,5 +195,5 @@ public class ElephantLoader : MonoBehaviour
 
         Debug.Log("=== FINAL PROMPT ===");
         Debug.Log(prompt);
-    }
+    }*/
 }

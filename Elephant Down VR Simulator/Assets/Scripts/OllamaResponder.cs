@@ -11,6 +11,7 @@ public class OllamaResponder : MonoBehaviour
     [SerializeField] private string model = "mistral";
     
     [SerializeField] private ElephantPersonality personality;
+	[SerializeField] private ElephantLoader elephantLoader;
 
     public Action<string> OnResponseReady;
     public Action<string> OnEmotionDetected;
@@ -24,7 +25,10 @@ public class OllamaResponder : MonoBehaviour
 
         try
         {
-            string engineeredPrompt = personality.BuildPrompt(text);
+            //string engineeredPrompt = personality.BuildPrompt(text);
+			string ragPrompt = elephantLoader.CreateRagPrompt(text);
+			Debug.Log("RAG PROMPT USED BY OLLAMA:\n" + ragPrompt);
+			string engineeredPrompt = personality.BuildPrompt(ragPrompt);
 
             var json = JsonUtility.ToJson(new Request
             {

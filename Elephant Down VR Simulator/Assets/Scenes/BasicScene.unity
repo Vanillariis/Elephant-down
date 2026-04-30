@@ -527,6 +527,7 @@ MonoBehaviour:
   url: http://localhost:11434/api/generate
   model: mistral
   personality: {fileID: 374091938}
+  elephantLoader: {fileID: 73100919}
 --- !u!114 &374091940
 MonoBehaviour:
   m_ObjectHideFlags: 0
