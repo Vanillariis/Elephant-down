@@ -556,7 +556,7 @@ MonoBehaviour:
   whisper: {fileID: 374091940}
   ollama: {fileID: 374091939}
   piper: {fileID: 374091937}
-  animatorScript: {fileID: 1821643791}
+  animatorScript: {fileID: 374091944}
 --- !u!114 &374091942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -598,7 +598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 191c98c98cf24104ab7a0e0bcdaf3619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimatorScript
-  animator: {fileID: 0}
+  animator: {fileID: 1290734761}
   enableKeyboardDebug: 1
 --- !u!114 &374091945
 MonoBehaviour:
@@ -5826,52 +5826,6 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 4161194016243784998, guid: e2453ed3911d7574bbca41d5f214cd70, type: 3}
   m_PrefabInstance: {fileID: 5832697402366829100}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1821643789
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1821643790}
-  - component: {fileID: 1821643791}
-  m_Layer: 0
-  m_Name: Elephant
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1821643790
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1821643789}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.5660466, z: -0, w: -0.8243732}
-  m_LocalPosition: {x: 0, y: -0, z: 3.61}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 291.05, z: 0}
---- !u!114 &1821643791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1821643789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 191c98c98cf24104ab7a0e0bcdaf3619, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ElephantEmotionTester
-  animator: {fileID: 1290734761}
-  enableKeyboardDebug: 1
 --- !u!4 &2012430709 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
@@ -6082,7 +6036,6 @@ SceneRoots:
   - {fileID: 1249617921}
   - {fileID: 383885922}
   - {fileID: 614488436}
-  - {fileID: 1821643790}
   - {fileID: 374091943}
   - {fileID: 2096859997}
   - {fileID: 73100920}
