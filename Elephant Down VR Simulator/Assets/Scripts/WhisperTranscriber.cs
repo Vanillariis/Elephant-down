@@ -54,6 +54,8 @@ public class WhisperTranscriber : MonoBehaviour
                 return;
 
             OnTranscriptionReady?.Invoke(result);
+            // log the raw output for debugging
+            Debug.Log("Whisper output: " + result);
         }
         catch (Exception e)
         {
