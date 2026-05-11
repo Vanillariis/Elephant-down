@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "com.srcnalt.openai-unity": "https://github.com/srcnalt/OpenAI-Unity.git",
+    "com.undreamai.llmunity": "https://github.com/undreamai/LLMUnity.git",
     "com.unity.ai.inference": "2.4.1",
     "com.unity.cloud.gltfast": "6.16.1",
     "com.unity.collab-proxy": "2.11.3",
