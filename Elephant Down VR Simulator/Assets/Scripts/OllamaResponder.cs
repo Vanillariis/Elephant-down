@@ -32,8 +32,8 @@ public class OllamaResponder : MonoBehaviour
 
             string memoryText = memory != null ? memory.GetMemoryText() : "No previous conversation.";
             Debug.Log("MEMORY USED BY OLLAMA:\n" + memoryText);
-
-            string engineeredPrompt = personality.BuildPrompt(ragPrompt, memoryText);
+            
+            string engineeredPrompt = personality.BuildPrompt(text, ragPrompt, memoryText);
 
             var json = JsonUtility.ToJson(new Request
             {

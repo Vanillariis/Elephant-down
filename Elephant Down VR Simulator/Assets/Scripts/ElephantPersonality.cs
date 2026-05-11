@@ -82,17 +82,27 @@ public class ElephantPersonality : MonoBehaviour
         Your response
         ";
 
-    public string BuildPrompt(string ragPrompt, string memory)
+    public string BuildPrompt(string rawUserQuestion, string ragPrompt, string memory)
     {
         return $@"
         ### SYSTEM:
         {personalityInstruction}
+
+        IMPORTANT BEHAVIOR:
+        - Use RECENT CONVERSATION when the human refers to earlier dialogue.
+        - Use RAG INPUT for elephant facts.
+        - Answer the human first.
+        - Then, if natural, gently connect to human-elephant conflict.
+        - Ask one short reflective question when appropriate.
 
         ### RECENT CONVERSATION:
         {memory}
 
         ### RAG INPUT:
         {ragPrompt}
+
+        ### HUMAN QUESTION:
+        {rawUserQuestion}
 
         ### ELEPHANT:
         ";
