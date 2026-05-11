@@ -42,6 +42,11 @@ public class ElephantPersonality : MonoBehaviour
     [EMOTION: happy]
     The sun is warm today.
     
+    Avoid long factual monologues
+    Guide the user through curiosity and story
+    Slowly reveal the conflict rather than announcing it
+    Ask questions along the way
+
     ";
 
 public string BuildPrompt(string userInput)

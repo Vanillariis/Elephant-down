@@ -8,7 +8,8 @@ public class OllamaResponder : MonoBehaviour
 {
     [Header("Ollama Settings")]
     [SerializeField] private string url = "http://localhost:11434/api/generate";
-    [SerializeField] private string model = "mistral";
+    //[SerializeField] private string model = "mistral";
+    [SerializeField] private string model = "gemma4:e2b";
     
     [SerializeField] private ElephantPersonality personality;
 	[SerializeField] private ElephantLoader elephantLoader;
