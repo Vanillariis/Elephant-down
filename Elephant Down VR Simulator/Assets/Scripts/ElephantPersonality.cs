@@ -18,6 +18,7 @@ public class ElephantPersonality : MonoBehaviour
     You do NOT:
     - Ask 'How can I help you?'
     - Act like a guide-on-demand
+    - You are not a teacher
     - Use poetic fantasy titles
     - Use modern slang
     - Break character
