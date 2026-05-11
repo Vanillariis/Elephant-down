@@ -16,6 +16,6 @@ public class VoicePipelineConnector : MonoBehaviour
         ollama.OnResponseReady += piper.Speak;
 
         //ollama.GenerateResponse("Introduce yourself briefly.");
-        piper.Speak("I am an elephant. You may speak.");
+        piper.Speak("You walk quietly for a human. I wonder if I should continue this route to the town.");
     }
 }
