@@ -13,6 +13,7 @@ public class OllamaResponder : MonoBehaviour
     
     [SerializeField] private ElephantPersonality personality;
 	[SerializeField] private ElephantLoader elephantLoader;
+    [SerializeField] private ConversationMemory memory;
 
     public Action<string> OnResponseReady;
     public Action<string> OnEmotionDetected;
@@ -26,10 +27,13 @@ public class OllamaResponder : MonoBehaviour
 
         try
         {
-            //string engineeredPrompt = personality.BuildPrompt(text);
-			string ragPrompt = elephantLoader.CreateRagPrompt(text);
-			Debug.Log("RAG PROMPT USED BY OLLAMA:\n" + ragPrompt);
-			string engineeredPrompt = personality.BuildPrompt(ragPrompt);
+            string ragPrompt = elephantLoader.CreateRagPrompt(text);
+            Debug.Log("RAG PROMPT USED BY OLLAMA:\n" + ragPrompt);
+
+            string memoryText = memory != null ? memory.GetMemoryText() : "No previous conversation.";
+            Debug.Log("MEMORY USED BY OLLAMA:\n" + memoryText);
+
+            string engineeredPrompt = personality.BuildPrompt(ragPrompt, memoryText);
 
             var json = JsonUtility.ToJson(new Request
             {
@@ -51,7 +55,6 @@ public class OllamaResponder : MonoBehaviour
 
             Debug.Log("RAW LLM OUTPUT: " + finalText);
 
-            // Extract emotion
             string emotion = "neutral";
             var match = System.Text.RegularExpressions.Regex.Match(finalText, @"\[EMOTION:\s*(.*?)\]");
             if (match.Success)
@@ -59,7 +62,6 @@ public class OllamaResponder : MonoBehaviour
                 emotion = match.Groups[1].Value.ToLower();
             }
 
-            // Clean text
             string cleanedText = finalText;
 
             cleanedText = System.Text.RegularExpressions.Regex
@@ -72,6 +74,11 @@ public class OllamaResponder : MonoBehaviour
 
             Debug.Log("CLEANED TEXT: " + cleanedText);
             Debug.Log("TEXT SENT TO PIPER: >>>" + cleanedText + "<<<");
+
+            if (memory != null)
+            {
+                memory.AddTurn(text, cleanedText);
+            }
 
             OnEmotionDetected?.Invoke(emotion);
             OnResponseReady?.Invoke(cleanedText);
