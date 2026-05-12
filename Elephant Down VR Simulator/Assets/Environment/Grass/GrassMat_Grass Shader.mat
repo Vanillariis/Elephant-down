@@ -29,7 +29,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Basemap:
-        m_Texture: {fileID: 2800000, guid: 65a0ffea32ffe4e8bb151ff916d3e2a5, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6f938580a4f294bf190c72117b80f128, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -47,9 +47,9 @@ Material:
     m_Ints: []
     m_Floats:
     - _CutOff: 0.3
-    - _Cutoff: 0.3
+    - _Cutoff: 0.8
     - _EmissionStrength: 0.15
-    - _Float: 0.9
+    - _Float: 0.5
     - _HeightOffset: 0
     - _HeightScale: 1
     - _High_offset: 0
@@ -57,7 +57,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _WindSpeed: 1.5
-    - _WindStrength: 2
+    - _WindStrength: 0.5
     - _Windspeed: 2
     m_Colors:
     - _Tint: {r: 0.49030256, g: 0.6226415, b: 0.26139194, a: 1}
