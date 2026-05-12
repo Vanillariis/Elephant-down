@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bba8019e7f4b44ec68f609182636b4da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ElephantLoader
-  jsonFile: {fileID: 4900000, guid: 8f3b5ef08bd664753b52dfdd2fe9f968, type: 3}
+  jsonFile: {fileID: 4900000, guid: d9d3a763370ea48938aed30ad1f7a859, type: 3}
   chunks: []
   embedder: {fileID: 73100918}
 --- !u!4 &73100920
@@ -1466,6 +1466,10 @@ PrefabInstance:
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7634941337736553285, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

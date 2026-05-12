@@ -15,7 +15,13 @@ public class ElephantChunk
     public string[] keywords;
     public string species;
     public string region;
+
+    // factual searchable text
     public string text;
+
+    // elephant-perspective text used for generation
+    public string elephant_text;
+
     public float[] embedding;
 }
 
@@ -48,6 +54,7 @@ public class ElephantLoader : MonoBehaviour
         float[] queryEmbedding = embedder.GenerateEmbedding(userQuestion);
 
         string context = GetTopKContext(queryEmbedding, 5);
+
         string prompt = BuildRagPrompt(userQuestion, context);
 
         Debug.Log("=== RAG PROMPT SENT TO LLM ===");
@@ -97,11 +104,16 @@ public class ElephantLoader : MonoBehaviour
         results.Sort((a, b) => b.score.CompareTo(a.score));
 
         int count = Mathf.Min(topK, results.Count);
+
         string context = "";
 
         for (int i = 0; i < count; i++)
         {
             ElephantChunk c = results[i].chunk;
+
+            string contextText = string.IsNullOrEmpty(c.elephant_text)
+                ? c.text
+                : c.elephant_text;
 
             context += "[Source " + (i + 1) + "]\n";
             context += "Title: " + c.title + "\n";
@@ -110,8 +122,7 @@ public class ElephantLoader : MonoBehaviour
             context += "Page: " + c.page + "\n";
             context += "Unit: " + c.unit + "\n";
             context += "Lesson: " + c.lesson + "\n";
-            context += "Similarity score: " + results[i].score + "\n";
-            context += "Text: " + c.text + "\n\n";
+            context += "Text: " + contextText + "\n\n";
         }
 
         return context;
@@ -125,12 +136,9 @@ public class ElephantLoader : MonoBehaviour
     public string BuildRagPrompt(string userQuestion, string context)
     {
         return
-            "Use the following retrieved knowledge as factual grounding.\n" +
-            "Do not copy it word for word. Use it naturally.\n" +
-            "If the answer is not supported by the context, say you do not know.\n\n" +
-            "Retrieved context:\n" +
+            "Retrieved memory:\n" +
             context +
-            "\nUser question:\n" +
+            "\nHuman question:\n" +
             userQuestion;
     }
 
@@ -152,9 +160,18 @@ public class ElephantLoader : MonoBehaviour
 
         chunks = wrapper.items;
 
-        Debug.Log("RAG system loaded. Chunks: " + chunks.Length);
-        Debug.Log("First title: " + chunks[0].title);
-        Debug.Log("Embedding length: " + chunks[0].embedding.Length);
+        Debug.Log("RAG system loaded.");
+        Debug.Log("Chunks loaded: " + chunks.Length);
+
+        if (chunks[0].embedding != null)
+        {
+            Debug.Log("Embedding dimension: " + chunks[0].embedding.Length);
+        }
+
+        if (!string.IsNullOrEmpty(chunks[0].elephant_text))
+        {
+            Debug.Log("Elephant text detected successfully.");
+        }
     }
     
     
