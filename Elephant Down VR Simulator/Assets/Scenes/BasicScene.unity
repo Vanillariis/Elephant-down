@@ -1176,7 +1176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bd3b53daceeb444b802349e32868b29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GrassSpawnScript
-  grassPrefab: {fileID: 2096919266867206048, guid: 795f72c006a534434b45d4bda25db7f1, type: 3}
+  grassPrefab: {fileID: 1609558353302495429, guid: 89b875ab07840ed47982924610925466, type: 3}
   player: {fileID: 2012430709}
   patchCount: 25
   spawnRadiusAroundPlayer: 15

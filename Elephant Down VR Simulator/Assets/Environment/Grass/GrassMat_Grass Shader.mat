@@ -29,7 +29,31 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Basemap:
-        m_Texture: {fileID: 2800000, guid: 6f938580a4f294bf190c72117b80f128, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2300f32a7550bcf44823f0a42cd0a6a9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_bdb295e52aa04c528123aed71018263e_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 765a6e54f7ca086438761bc15ca0e82c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_df2ae29b071c4dd281d00abb6b6e28d8_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 765a6e54f7ca086438761bc15ca0e82c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShallowNormalMap_X:
+        m_Texture: {fileID: 2800000, guid: 340b1d3bb869c17479ba5a301ad6cbbf, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShallowNormalMap_Y:
+        m_Texture: {fileID: 2800000, guid: 56f3d990605e14349baabc749f29cbad, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SteepNormalMap_X:
+        m_Texture: {fileID: 2800000, guid: 2439570b5ca6d644ba9a90d754295107, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SteepNormalMap_Y:
+        m_Texture: {fileID: 2800000, guid: 4089b671a1e98ea48a6eb4c1cdad6eef, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -48,18 +72,38 @@ Material:
     m_Floats:
     - _CutOff: 0.3
     - _Cutoff: 0.8
+    - _DuneDirection: 1.157
+    - _DuneDirectionX: 1.157
     - _EmissionStrength: 0.15
     - _Float: 0.71
+    - _GlitterIntensity: 0.2
+    - _GlitterThreshold: 0
     - _HeightOffset: 0
     - _HeightScale: 1
     - _High_offset: 0
     - _Hight_Scale: 2
+    - _OceanSpecularPower: 0.9
+    - _OceanSpecularStrength: 0.39
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _RimPower: 0.09
+    - _RimStrength: 1.03
+    - _SandStrength: 0.53
+    - _SpecularIntensity: 1
+    - _Steepness: 5.49
+    - _SteepnessSharpnessPower: 0.5
     - _WindSpeed: 1.5
     - _WindStrength: 0.5
     - _Windspeed: 2
+    - _XRMotionVectorsPass: 1
     m_Colors:
+    - _GlitterColour: {r: 1024.0004, g: 1024.0004, b: 1024.0004, a: 0}
+    - _GlitterTiling: {r: 1, g: 1, b: 0, a: 0}
+    - _OceanSpecularColour: {r: 1, g: 0.9248936, b: 0.8066038, a: 0}
+    - _RimColour: {r: 1, g: 0.9427395, b: 0.8349056, a: 0}
+    - _RipplesNormalTiling: {r: 1.14, g: 0.57, b: 0, a: 0}
+    - _ShadowColour: {r: 0.39622638, g: 0.23756576, b: 0.09531859, a: 0}
+    - _SurfaceColour: {r: 0.9811321, g: 0.8284632, b: 0.5877537, a: 0}
     - _Tint: {r: 0.49030256, g: 0.6226415, b: 0.26139194, a: 1}
     - _TopColor: {r: 1, g: 0.8238035, b: 0, a: 1}
     - _Top_Color: {r: 0.69774085, g: 0.7264151, b: 0, a: 1}
