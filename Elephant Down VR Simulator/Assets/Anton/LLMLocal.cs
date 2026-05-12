@@ -1,0 +1,127 @@
+using UnityEngine;
+using System;
+using System.Text.RegularExpressions;
+using LLMUnity;
+using System.Threading.Tasks;
+
+public class LLMLocal : MonoBehaviour
+{
+    [Header("LLMUnity")]
+    [SerializeField] private LLMAgent llmAgent;
+
+    [Header("Custom Logic")]
+    [SerializeField] private ElephantPersonality personality;
+    [SerializeField] private ElephantLoader elephantLoader;
+    [SerializeField] private ConversationMemory memory;
+
+    public Action<string> OnResponseReady;     // cleaned (for TTS)
+    public Action<string> OnRawResponseReady;  // raw full output (optional debug)
+    public Action<string> OnEmotionDetected;
+
+    public bool IsBusy { get; private set; }
+
+    // ✅ MAIN ENTRY
+    public async void GenerateResponse(string userText)
+    {
+        if (IsBusy)
+        {
+            Debug.LogWarning("LLM is busy, ignoring input");
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(userText))
+            return;
+
+        IsBusy = true;
+
+        Debug.Log("USER SAID: " + userText);
+
+        try
+        {
+            // =============================
+            // Build prompt
+            // =============================
+            string ragPrompt = elephantLoader != null
+                ? elephantLoader.CreateRagPrompt(userText)
+                : "";
+
+            string memoryText = memory != null
+                ? memory.GetMemoryText()
+                : "No previous conversation.";
+
+            string engineeredPrompt = userText;
+
+            if (personality != null)
+            {
+                engineeredPrompt = personality.BuildPrompt(userText, ragPrompt, memoryText);
+            }
+
+            Debug.Log("FINAL PROMPT:\n" + engineeredPrompt);
+
+            // ✅ ✅ KEY CHANGE: WAIT FOR FULL RESPONSE
+            string finalText = await llmAgent.Chat(engineeredPrompt);
+
+            if (string.IsNullOrWhiteSpace(finalText))
+            {
+                Debug.LogWarning("Empty LLM response");
+                return;
+            }
+
+            Debug.Log("RAW LLM OUTPUT:\n" + finalText);
+
+            // =============================
+            // Extract emotion
+            // =============================
+            string emotion = "neutral";
+
+            var match = Regex.Match(finalText, @"\[EMOTION:\s*(.*?)\]");
+
+            if (match.Success)
+            {
+                emotion = match.Groups[1].Value.ToLower();
+            }
+
+            // =============================
+            // Clean output (for TTS)
+            // =============================
+            string cleanedText = finalText;
+
+            cleanedText = Regex.Replace(cleanedText, @"\[EMOTION:.*?\]", "");
+            cleanedText = Regex.Replace(cleanedText, @"\[\d{2}:\d{2}:\d{2}.*?\]", "");
+            cleanedText = cleanedText.Trim();
+
+            Debug.Log("CLEANED TEXT:\n" + cleanedText);
+
+            // =============================
+            // Save memory
+            // =============================
+            if (memory != null)
+            {
+                memory.AddTurn(userText, cleanedText);
+            }
+
+            // =============================
+            // Fire events
+            // =============================
+            OnEmotionDetected?.Invoke(emotion);
+
+            OnRawResponseReady?.Invoke(finalText);   // raw full output
+            OnResponseReady?.Invoke(cleanedText);    // cleaned (for TTS)
+        }
+        catch (Exception e)
+        {
+            Debug.LogError("LLM error: " + e.Message);
+        }
+        finally
+        {
+            IsBusy = false;
+        }
+    }
+
+    // ✅ Optional cancel
+    public void Cancel()
+    {
+        llmAgent.CancelRequests();
+        IsBusy = false;
+    }
+}
