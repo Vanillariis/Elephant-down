@@ -83,6 +83,8 @@ public class GrassSpawnScript : MonoBehaviour
 
                 GameObject grass = Instantiate(grassPrefab, spawnPos, rotation, transform);
 
+                
+
                 float scale = Random.Range(randomScaleRange.x, randomScaleRange.y);
                 grass.transform.localScale = Vector3.one * scale;
             }

@@ -49,7 +49,7 @@ Material:
     - _CutOff: 0.3
     - _Cutoff: 0.8
     - _EmissionStrength: 0.15
-    - _Float: 0.5
+    - _Float: 0.71
     - _HeightOffset: 0
     - _HeightScale: 1
     - _High_offset: 0

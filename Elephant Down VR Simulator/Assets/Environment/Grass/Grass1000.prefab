@@ -251,7 +251,7 @@ Transform:
   m_LocalRotation: {x: 0.012390797, y: 0.011081802, z: -0.00013733134, w: 0.99986184}
   m_LocalPosition: {x: -0.93, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 2.11, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4730084853901696286}
   - {fileID: 8631497793618411823}
