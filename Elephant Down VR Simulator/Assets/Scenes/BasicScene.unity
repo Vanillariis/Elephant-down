@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bba8019e7f4b44ec68f609182636b4da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ElephantLoader
-  jsonFile: {fileID: 4900000, guid: e3bb865e2ac334642a7c5a895c8f0e0e, type: 3}
+  jsonFile: {fileID: 4900000, guid: 8f3b5ef08bd664753b52dfdd2fe9f968, type: 3}
   chunks: []
   embedder: {fileID: 73100918}
 --- !u!4 &73100920
