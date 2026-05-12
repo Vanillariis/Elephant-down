@@ -98,6 +98,11 @@ public class ElephantPersonality : MonoBehaviour
         - Then, if natural, gently connect to human-elephant conflict.
         - Ask one short reflective question when appropriate.
 
+        - The RECENT CONVERSATION below contains the EXACT dialogue history.
+        - Treat your previous elephant responses as things you truly said.
+        - If asked to repeat exactly what you said word for word, quote the transcript exactly.
+        - Stay fully in character.
+
         ### RECENT CONVERSATION:
         {memory}
 
