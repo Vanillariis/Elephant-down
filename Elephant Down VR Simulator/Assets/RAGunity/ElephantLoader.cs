@@ -8,10 +8,20 @@ public class ElephantChunk
     public string id;
     public string title;
     public string topic;
+    public string source;
+    public int page;
+    public string unit;
+    public string lesson;
     public string[] keywords;
     public string species;
     public string region;
+
+    // factual searchable text
     public string text;
+
+    // elephant-perspective text used for generation
+    public string elephant_text;
+
     public float[] embedding;
 }
 
@@ -43,7 +53,7 @@ public class ElephantLoader : MonoBehaviour
 
         float[] queryEmbedding = embedder.GenerateEmbedding(userQuestion);
 
-        string context = GetTopKContext(queryEmbedding, 3);
+        string context = GetTopKContext(queryEmbedding, 5);
 
         string prompt = BuildRagPrompt(userQuestion, context);
 
@@ -52,8 +62,7 @@ public class ElephantLoader : MonoBehaviour
 
         return prompt;
     }
-    
-    
+
     float CosineSimilarity(float[] a, float[] b)
     {
         if (a == null || b == null || a.Length != b.Length)
@@ -74,15 +83,15 @@ public class ElephantLoader : MonoBehaviour
         }
 
         if (magA == 0f || magB == 0f)
-			{	
-    		Debug.LogError("Zero-length embedding vector.");
-    		return -1f;
-			}
+        {
+            Debug.LogError("Zero-length embedding vector.");
+            return -1f;
+        }
 
-		return dot / (Mathf.Sqrt(magA) * Mathf.Sqrt(magB));
+        return dot / (Mathf.Sqrt(magA) * Mathf.Sqrt(magB));
     }
 
-    public void TestSearchTopK(float[] queryEmbedding, int topK = 3)
+    public string GetTopKContext(float[] queryEmbedding, int topK = 5)
     {
         var results = new List<(ElephantChunk chunk, float score)>();
 
@@ -96,53 +105,43 @@ public class ElephantLoader : MonoBehaviour
 
         int count = Mathf.Min(topK, results.Count);
 
-        for (int i = 0; i < count; i++)
-        {
-            Debug.Log("Rank " + (i + 1));
-            Debug.Log("Title: " + results[i].chunk.title);
-            Debug.Log("Score: " + results[i].score);
-            Debug.Log("Text: " + results[i].chunk.text);
-        }
-    }
-
-    public string GetTopKContext(float[] queryEmbedding, int topK = 3)
-    {
-        var results = new List<(ElephantChunk chunk, float score)>();
-
-        foreach (ElephantChunk chunk in chunks)
-        {
-            float score = CosineSimilarity(queryEmbedding, chunk.embedding);
-            results.Add((chunk, score));
-        }
-
-        results.Sort((a, b) => b.score.CompareTo(a.score));
-
-        int count = Mathf.Min(topK, results.Count);
         string context = "";
 
         for (int i = 0; i < count; i++)
         {
-            context += "[Source " + (i + 1) + ": " + results[i].chunk.title + "]\n";
-            context += results[i].chunk.text + "\n\n";
+            ElephantChunk c = results[i].chunk;
+
+            string contextText = string.IsNullOrEmpty(c.elephant_text)
+                ? c.text
+                : c.elephant_text;
+
+            context += "[Source " + (i + 1) + "]\n";
+            context += "Title: " + c.title + "\n";
+            context += "Topic: " + c.topic + "\n";
+            context += "Source: " + c.source + "\n";
+            context += "Page: " + c.page + "\n";
+            context += "Unit: " + c.unit + "\n";
+            context += "Lesson: " + c.lesson + "\n";
+            context += "Text: " + contextText + "\n\n";
         }
 
         return context;
     }
-    
+
+    public void TestSearchTopK(float[] queryEmbedding, int topK = 5)
+    {
+        Debug.Log(GetTopKContext(queryEmbedding, topK));
+    }
+
     public string BuildRagPrompt(string userQuestion, string context)
     {
-        string prompt =
-            "You are an assistant answering questions about elephants.\n" +
-            "Use only the context below. If the answer is not in the context, say you do not know.\n\n" +
-            "Context:\n" +
+        return
+            "Retrieved memory:\n" +
             context +
-            "\nQuestion:\n" +
-            userQuestion +
-            "\n\nAnswer:";
-
-        return prompt;
+            "\nHuman question:\n" +
+            userQuestion;
     }
-    
+
     void Start()
     {
         if (jsonFile == null)
@@ -152,9 +151,27 @@ public class ElephantLoader : MonoBehaviour
         }
 
         ElephantWrapper wrapper = JsonUtility.FromJson<ElephantWrapper>(jsonFile.text);
+
+        if (wrapper == null || wrapper.items == null || wrapper.items.Length == 0)
+        {
+            Debug.LogError("Could not load chunks from JSON.");
+            return;
+        }
+
         chunks = wrapper.items;
 
-        Debug.Log("RAG system loaded. Chunks: " + chunks.Length);
+        Debug.Log("RAG system loaded.");
+        Debug.Log("Chunks loaded: " + chunks.Length);
+
+        if (chunks[0].embedding != null)
+        {
+            Debug.Log("Embedding dimension: " + chunks[0].embedding.Length);
+        }
+
+        if (!string.IsNullOrEmpty(chunks[0].elephant_text))
+        {
+            Debug.Log("Elephant text detected successfully.");
+        }
     }
     
     

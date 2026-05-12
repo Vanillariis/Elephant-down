@@ -79,9 +79,11 @@ public class GrassSpawnScript : MonoBehaviour
                 }
 
                 // Only rotate around Y so the grass stays upright
-                Quaternion rotation = Quaternion.Euler(-90f, Random.Range(0f, 360f), 0f);
+                Quaternion rotation = Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
 
                 GameObject grass = Instantiate(grassPrefab, spawnPos, rotation, transform);
+
+                
 
                 float scale = Random.Range(randomScaleRange.x, randomScaleRange.y);
                 grass.transform.localScale = Vector3.one * scale;
