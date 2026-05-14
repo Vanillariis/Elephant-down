@@ -32,10 +32,30 @@ public class MicrophoneRecorder : MonoBehaviour
     {
         recording = false;
 
+        int position = Microphone.GetPosition(null);
+
         Microphone.End(null);
 
-        OnRecordingFinished?.Invoke(clip);
+        if (position <= 0)
+        {
+            Debug.LogWarning("No microphone data recorded.");
+            return;
+        }
 
+        float[] samples = new float[position * clip.channels];
+        clip.GetData(samples, 0);
+
+        AudioClip trimmedClip = AudioClip.Create(
+            "TrimmedRecording",
+            position,
+            clip.channels,
+            clip.frequency,
+            false
+        );
+
+        trimmedClip.SetData(samples, 0);
+
+        OnRecordingFinished?.Invoke(trimmedClip);
     }
 
     private void Update()
