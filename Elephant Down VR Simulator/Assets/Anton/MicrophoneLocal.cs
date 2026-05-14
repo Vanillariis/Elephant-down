@@ -12,7 +12,7 @@ public class MicrophoneLocal : MonoBehaviour
     private AudioClip clip;
     private bool recording;
 
-    // ✅ Keyboard key (easy to change in Inspector if needed)
+    // ✅ Keyboard key (kept)
     [Header("Input")]
     [SerializeField] private KeyCode recordKey = KeyCode.W;
 
@@ -28,13 +28,13 @@ public class MicrophoneLocal : MonoBehaviour
     {
         recording = true;
 
-        clip = Microphone.Start(null, false, 60, 44100);
-
-        // Interrupt any ongoing speech
+        // ✅ Stop speech immediately (same behavior as recorder)
         if (tts != null)
         {
             tts.Stop();
         }
+
+        clip = Microphone.Start(null, false, 60, 44100);
 
         Debug.Log("Recording started...");
     }
@@ -43,17 +43,39 @@ public class MicrophoneLocal : MonoBehaviour
     {
         recording = false;
 
+        int position = Microphone.GetPosition(null);
         Microphone.End(null);
 
-        Debug.Log("Recording stopped.");
+        // ✅ Safety check (from MicrophoneRecorder)
+        if (position <= 0)
+        {
+            Debug.LogWarning("No microphone data recorded.");
+            return;
+        }
 
-        OnRecordingFinished?.Invoke(clip);
+        // ✅ Trim audio (IMPORTANT)
+        float[] samples = new float[position * clip.channels];
+        clip.GetData(samples, 0);
+
+        AudioClip trimmedClip = AudioClip.Create(
+            "TrimmedRecording",
+            position,
+            clip.channels,
+            clip.frequency,
+            false
+        );
+
+        trimmedClip.SetData(samples, 0);
+
+        Debug.Log("Recording stopped. Length: " + position);
+
+        OnRecordingFinished?.Invoke(trimmedClip);
     }
 
     private void Update()
     {
         // =====================================
-        // ✅ VR CONTROLLER INPUT (unchanged)
+        // ✅ VR CONTROLLER INPUT
         // =====================================
         var device = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
 
@@ -72,25 +94,20 @@ public class MicrophoneLocal : MonoBehaviour
         }
 
         // =====================================
-        // ✅ KEYBOARD INPUT (NEW)
+        // ✅ KEYBOARD INPUT (kept)
         // =====================================
-
-        // Key pressed → start recording
         if (Input.GetKeyDown(recordKey) && !recording)
         {
             StartRecording();
         }
 
-        // Key released → stop recording
         if (Input.GetKeyUp(recordKey) && recording)
         {
             StopRecording();
         }
     }
 
-    // =====================================
-    // ✅ PUBLIC STATE
-    // =====================================
+    // ✅ Public state (unchanged)
     public bool IsRecording
     {
         get { return recording; }

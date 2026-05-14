@@ -1,0 +1,2 @@
+C:\Medialogi\P8\Project Elephant\Elephant-down\Elephant Down VR Simulator\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\Medialogi\P8\Project Elephant\Elephant-down\Elephant Down VR Simulator\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt

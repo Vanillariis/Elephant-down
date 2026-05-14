@@ -1,0 +1,10 @@
+# ninja log v5
+43	7167	8004568903347149	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	365f11435fc16979
+24	7181	8004568903409136	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	5dd44697af135957
+1	7184	8004568903508885	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	b01d8e343e0df8a9
+63	7193	8004568903673190	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	8903e08bfde1486a
+9	7210	8004568903865255	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	c603e8c1bdeeb491
+52	7927	8004568911039596	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	36aecff40bc99ac
+34	7936	8004568911131705	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	ea457d858eb6aee5
+16	8007	8004568911131705	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	d0c87e031733b4ba
+8007	9680	8004568928577738	C:/Medialogi/P8/Project Elephant/Elephant-down/Elephant Down VR Simulator/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4r4c204c/obj/arm64-v8a/libgame.so	fb1e4b5df493dd29
