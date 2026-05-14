@@ -81,7 +81,7 @@ Material:
     - _HeightOffset: 0
     - _HeightScale: 1
     - _High_offset: 0
-    - _Hight_Scale: 2
+    - _Hight_Scale: 0.2
     - _OceanSpecularPower: 0.9
     - _OceanSpecularStrength: 0.39
     - _QueueControl: 0
@@ -93,8 +93,8 @@ Material:
     - _Steepness: 5.49
     - _SteepnessSharpnessPower: 0.5
     - _WindSpeed: 1.5
-    - _WindStrength: 0.5
-    - _Windspeed: 2
+    - _WindStrength: 0.05
+    - _Windspeed: 1.35
     - _XRMotionVectorsPass: 1
     m_Colors:
     - _GlitterColour: {r: 1024.0004, g: 1024.0004, b: 1024.0004, a: 0}
@@ -104,9 +104,9 @@ Material:
     - _RipplesNormalTiling: {r: 1.14, g: 0.57, b: 0, a: 0}
     - _ShadowColour: {r: 0.39622638, g: 0.23756576, b: 0.09531859, a: 0}
     - _SurfaceColour: {r: 0.9811321, g: 0.8284632, b: 0.5877537, a: 0}
-    - _Tint: {r: 0.49030256, g: 0.6226415, b: 0.26139194, a: 1}
+    - _Tint: {r: 0.6509434, g: 0.38150808, b: 0.29169634, a: 1}
     - _TopColor: {r: 1, g: 0.8238035, b: 0, a: 1}
-    - _Top_Color: {r: 0.69774085, g: 0.7264151, b: 0, a: 1}
+    - _Top_Color: {r: 0.8867924, g: 0.5924252, b: 0.11294055, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &2819998412323993533

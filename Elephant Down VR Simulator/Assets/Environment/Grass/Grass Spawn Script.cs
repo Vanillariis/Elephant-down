@@ -6,6 +6,10 @@ public class GrassSpawnScript : MonoBehaviour
     public GameObject grassPrefab;
     public Transform player;
 
+    [Header("Elephant Avoidance")]
+    public Transform elephant;
+    public float elephantAvoidRadius = 4f;
+
     [Header("Patch Distribution")]
     public int patchCount = 25;
     public float spawnRadiusAroundPlayer = 15f;
@@ -40,6 +44,7 @@ public class GrassSpawnScript : MonoBehaviour
         {
             // Choose a random patch center around the player
             Vector2 patchOffset = Random.insideUnitCircle * spawnRadiusAroundPlayer;
+
             Vector3 patchCenter = new Vector3(
                 player.position.x + patchOffset.x,
                 player.position.y,
@@ -54,6 +59,7 @@ public class GrassSpawnScript : MonoBehaviour
             {
                 // Random position inside this patch
                 Vector2 localOffset = Random.insideUnitCircle * patchRadius;
+
                 Vector3 spawnPos = new Vector3(
                     patchCenter.x + localOffset.x,
                     patchCenter.y,
@@ -78,12 +84,24 @@ public class GrassSpawnScript : MonoBehaviour
                     }
                 }
 
+                // Prevent grass from spawning near elephant
+                if (elephant != null)
+                {
+                    Vector3 flatSpawnPos = new Vector3(spawnPos.x, 0f, spawnPos.z);
+                    Vector3 flatElephantPos = new Vector3(elephant.position.x, 0f, elephant.position.z);
+
+                    float distance = Vector3.Distance(flatSpawnPos, flatElephantPos);
+
+                    if (distance < elephantAvoidRadius)
+                    {
+                        continue;
+                    }
+                }
+
                 // Only rotate around Y so the grass stays upright
                 Quaternion rotation = Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
 
                 GameObject grass = Instantiate(grassPrefab, spawnPos, rotation, transform);
-
-                
 
                 float scale = Random.Range(randomScaleRange.x, randomScaleRange.y);
                 grass.transform.localScale = Vector3.one * scale;

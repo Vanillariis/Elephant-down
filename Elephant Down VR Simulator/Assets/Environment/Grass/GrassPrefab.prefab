@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &105228370006558115
 Transform:
@@ -26,8 +26,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.46492, y: -0.2, z: 21.00246}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5937241296321551379}
   m_Father: {fileID: 0}
@@ -40,9 +40,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 105228370006558115}
     m_Modifications:
+    - target: {fileID: 603217649507834877, guid: 795f72c006a534434b45d4bda25db7f1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 747019835256014231, guid: 795f72c006a534434b45d4bda25db7f1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2096919266867206048, guid: 795f72c006a534434b45d4bda25db7f1, type: 3}
       propertyPath: m_Name
       value: Grass1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2096919266867206048, guid: 795f72c006a534434b45d4bda25db7f1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8418335767451586858, guid: 795f72c006a534434b45d4bda25db7f1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9164984302174111138, guid: 795f72c006a534434b45d4bda25db7f1, type: 3}
       propertyPath: m_LocalScale.y
