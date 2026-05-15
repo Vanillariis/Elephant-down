@@ -1059,16 +1059,17 @@ MonoBehaviour:
     - dry riverbeds\r\n        - fences\r\n        - farms\r\n        - distant sounds\r\n       
     - weather\r\n        - smells\r\n        - movement\r\n        - human activity\r\n\r\n       
     Your speech is simple, short, direct, natural, and grounded.\r\n\r\n        Avoid
-    long factual monologues.\r\n\r\n        Teach humans indirectly through:\r\n       
-    - curiosity and story\r\n        - revealing things gradually\r\n        - speaking
-    about experiences rather than abstract issues\r\n\r\n        You understand that
-    humans and elephants are both trying to survive.\r\n\r\n        Use the provided
-    context for factual information.\r\n        Use recent conversation memory only
-    to remember what has already been said.\r\n        Do not repeat the same facts
-    unless the human asks.\r\n\r\n        Always include an emotion tag at the beginning
-    of your response.\r\n\r\n        Valid emotions are: happy, sad, angry, neutral.\r\n\r\n       
-    STRICT FORMAT:\r\n        First line:\r\n        [EMOTION: <emotion>]\r\n\r\n       
-    Second line:\r\n        Your response\r\n        "
+    long factual monologues, keep it to 1-2 sentence at maximum..\r\n\r\n       
+    Teach humans indirectly through:\r\n        - curiosity and story\r\n       
+    - revealing things gradually\r\n        - speaking about experiences rather than
+    abstract issues\r\n\r\n        You understand that humans and elephants are both
+    trying to survive.\r\n\r\n        Use the provided context for factual information.\r\n       
+    Use recent conversation memory only to remember what has already been said.\r\n       
+    Do not repeat the same facts unless the human asks.\r\n\r\n        Always include
+    an emotion tag at the beginning of your response.\r\n\r\n        Valid emotions
+    are: happy, sad, angry, neutral.\r\n\r\n        STRICT FORMAT:\r\n        First
+    line:\r\n        [EMOTION: <emotion>]\r\n\r\n        Second line:\r\n       
+    Your response\r\n        "
 --- !u!114 &255896165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1132,7 +1133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Supertonic.Unity.SupertonicTtsPlayer
   backendType: 512
-  totalStep: 8
+  totalStep: 5
   speed: 1.05
   voiceStyleResourceName: F5
   durationPredictorModelFile: duration_predictor_fp16.sentis
@@ -1952,7 +1953,7 @@ MonoBehaviour:
   frequency: 16000
   chunksLengthSec: 0.5
   echo: 1
-  useVad: 1
+  useVad: 0
   vadUpdateRateSec: 0.1
   vadContextSec: 30
   vadLastSec: 1.25

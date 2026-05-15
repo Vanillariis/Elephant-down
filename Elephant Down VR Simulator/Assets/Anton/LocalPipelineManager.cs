@@ -11,11 +11,14 @@ public class LocalPipelineManager : MonoBehaviour
     private void Start()
     {
         recorder.OnRecordingFinished += whisper.Transcribe;
-        whisper.OnTranscriptionReady += ollama.GenerateResponse;
+        whisper.OnTranscriptionReady += async (text) =>
+        {
+            await ollama.GenerateResponse(text);
+        };
         ollama.OnEmotionDetected += animatorScript.SetEmotion;
         ollama.OnResponseReady += tts.Speak;
 
         //ollama.GenerateResponse("Introduce yourself briefly.");
-        tts.Speak("You walk quietly for a human. I wonder if I should continue this route to the town.");
+        tts.Speak("Ah… a Human. We do not often get time to truly listen to one another, stay here with me for a while. You see an elephant standing before you, but I also carry generations of memory. We elephants survive by remembering. Humans survive by changing. Maybe that is why we misunderstand each other sometimes?");
     }
 }

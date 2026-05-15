@@ -14,14 +14,14 @@ public class LLMLocal : MonoBehaviour
     [SerializeField] private ElephantLoader elephantLoader;
     [SerializeField] private ConversationMemory memory;
 
-    public Action<string> OnResponseReady;     // cleaned (for TTS)
-    public Action<string> OnRawResponseReady;  // raw full output (optional debug)
+    public Action<string> OnResponseReady;      // cleaned (for TTS)
+    public Action<string> OnRawResponseReady;   // raw full output (optional debug)
     public Action<string> OnEmotionDetected;
 
     public bool IsBusy { get; private set; }
 
     // ✅ MAIN ENTRY
-    public async void GenerateResponse(string userText)
+    public async Task GenerateResponse(string userText)
     {
         if (IsBusy)
         {
@@ -39,15 +39,19 @@ public class LLMLocal : MonoBehaviour
         try
         {
             // =============================
-            // Build prompt
+            // Build prompt (RAG + Memory)
             // =============================
             string ragPrompt = elephantLoader != null
                 ? elephantLoader.CreateRagPrompt(userText)
                 : "";
 
+            Debug.Log("RAG PROMPT USED:\n" + ragPrompt);
+
             string memoryText = memory != null
                 ? memory.GetMemoryText()
                 : "No previous conversation.";
+
+            Debug.Log("MEMORY USED:\n" + memoryText);
 
             string engineeredPrompt = userText;
 
@@ -58,7 +62,7 @@ public class LLMLocal : MonoBehaviour
 
             Debug.Log("FINAL PROMPT:\n" + engineeredPrompt);
 
-            // ✅ ✅ KEY CHANGE: WAIT FOR FULL RESPONSE
+            // ✅ Wait for full response from LLMAgent
             string finalText = await llmAgent.Chat(engineeredPrompt);
 
             if (string.IsNullOrWhiteSpace(finalText))
@@ -75,7 +79,6 @@ public class LLMLocal : MonoBehaviour
             string emotion = "neutral";
 
             var match = Regex.Match(finalText, @"\[EMOTION:\s*(.*?)\]");
-
             if (match.Success)
             {
                 emotion = match.Groups[1].Value.ToLower();
@@ -91,6 +94,7 @@ public class LLMLocal : MonoBehaviour
             cleanedText = cleanedText.Trim();
 
             Debug.Log("CLEANED TEXT:\n" + cleanedText);
+            Debug.Log("TEXT SENT TO PIPER: >>>" + cleanedText + "<<<");
 
             // =============================
             // Save memory
@@ -104,9 +108,16 @@ public class LLMLocal : MonoBehaviour
             // Fire events
             // =============================
             OnEmotionDetected?.Invoke(emotion);
+            OnRawResponseReady?.Invoke(finalText);
+            OnResponseReady?.Invoke(cleanedText);
 
-            OnRawResponseReady?.Invoke(finalText);   // raw full output
-            OnResponseReady?.Invoke(cleanedText);    // cleaned (for TTS)
+            // =============================
+            // FPS Logger (added from OllamaResponder)
+            // =============================
+            if (FPSLogger.instance != null)
+            {
+                FPSLogger.instance.LogDialogue(userText, cleanedText, emotion);
+            }
         }
         catch (Exception e)
         {
@@ -118,7 +129,7 @@ public class LLMLocal : MonoBehaviour
         }
     }
 
-    // ✅ Optional cancel
+    // ✅ Optional cancel (already good)
     public void Cancel()
     {
         llmAgent.CancelRequests();
