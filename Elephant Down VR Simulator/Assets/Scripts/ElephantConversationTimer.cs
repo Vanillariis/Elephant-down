@@ -4,7 +4,7 @@ using UnityEngine;
 public class ElephantConversationTimer : MonoBehaviour
 {
     [Header("Conversation Settings")]
-    [SerializeField] private float conversationDuration = 300f;
+    [SerializeField] private float conversationDuration = 600f;
 
     [Header("References")]
     [SerializeField] private MicrophoneRecorder recorder;
