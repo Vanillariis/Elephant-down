@@ -91,6 +91,11 @@ public class SupertonicTTSLocal : MonoBehaviour
     {
         isSpeaking = true;
 
+
+        float ttsStartTime = Time.realtimeSinceStartup;
+        Debug.Log(">>> TTS START");
+
+
         // ✅ Set utteranceText
         var field = typeof(SupertonicTtsPlayer)
             .GetField("utteranceText", BindingFlags.NonPublic | BindingFlags.Instance);
@@ -148,6 +153,11 @@ public class SupertonicTTSLocal : MonoBehaviour
         {
             yield return null;
         }
+
+
+        float ttsEndTime = Time.realtimeSinceStartup;
+        Debug.Log($"<<< TTS DONE: {(ttsEndTime - ttsStartTime):F2} seconds");
+
 
         isSpeaking = false;
     }

@@ -4,10 +4,12 @@ public class LocalPipelineManager : MonoBehaviour
 {
     [SerializeField] private MicrophoneLocal recorder;
     [SerializeField] private WhisperLocal whisper;
-    [SerializeField] private LLMLocal ollama;
+    [SerializeField] private LLMLocal_Simple ollama;
     [SerializeField] private SupertonicTTSLocal tts;
     [SerializeField] private AnimatorScript animatorScript;
 
+
+    private float pipelineStartTime;
     private void Start()
     {
         recorder.OnRecordingFinished += whisper.Transcribe;
@@ -15,7 +17,7 @@ public class LocalPipelineManager : MonoBehaviour
         {
             await ollama.GenerateResponse(text);
         };
-        ollama.OnEmotionDetected += animatorScript.SetEmotion;
+        //ollama.OnEmotionDetected += animatorScript.SetEmotion;
         ollama.OnResponseReady += tts.Speak;
 
         //ollama.GenerateResponse("Introduce yourself briefly.");

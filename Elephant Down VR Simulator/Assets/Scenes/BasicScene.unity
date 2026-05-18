@@ -1727,6 +1727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63f29ba4070c07c45ae4a3e02f0ffd60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MicrophoneLocal
+  microphoneRecord: {fileID: 948458933}
   tts: {fileID: 700301101}
   recordKey: 119
 --- !u!114 &477756475
@@ -1743,7 +1744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LocalPipelineManager
   recorder: {fileID: 477756474}
   whisper: {fileID: 948458931}
-  ollama: {fileID: 1808006351}
+  ollama: {fileID: 1808006354}
   tts: {fileID: 700301101}
   animatorScript: {fileID: 374091944}
 --- !u!1001 &499076776
@@ -7563,7 +7564,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944224556}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -7731,11 +7732,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: com.whisper.unity::Whisper.Utils.MicrophoneRecord
   maxLengthSec: 60
-  loop: 0
-  frequency: 16000
+  loop: 1
+  frequency: 22050
   chunksLengthSec: 0.5
-  echo: 1
-  useVad: 0
+  echo: 0
+  useVad: 1
   vadUpdateRateSec: 0.1
   vadContextSec: 30
   vadLastSec: 1.25
@@ -7948,17 +7949,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a50e3140c3ecaaf1c848dbf141cc2074, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  advancedOptions: 0
+  advancedOptions: 1
   _remote: 0
   _port: 13333
   _APIKey: 
   _SSLCert: 
   _SSLKey: 
-  _numThreads: 4
+  _numThreads: 3
   _numGPULayers: 0
   _parallelPrompts: 1
   _contextSize: 4096
-  _batchSize: 512
+  _batchSize: 256
   _model: LLMModels/Qwen3.5-2B-Q4_K_M.gguf
   _flashAttention: 0
   _reasoning: 0
@@ -8106,7 +8107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4326d5ae3b03ff55847035351559f4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  advancedOptions: 0
+  advancedOptions: 1
   _remote: 0
   _llm: {fileID: 1113308924}
   _APIKey: 
@@ -8132,7 +8133,7 @@ MonoBehaviour:
   nProbs: 0
   ignoreEos: 0
   save: 
-  debugPrompt: 0
+  debugPrompt: 1
   overflowStrategy: 1
   overflowTargetRatio: 0.5
   overflowSummarizePrompt: 
@@ -8703,7 +8704,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436054101}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -9096,6 +9097,7 @@ GameObject:
   - component: {fileID: 1808006353}
   - component: {fileID: 1808006351}
   - component: {fileID: 1808006352}
+  - component: {fileID: 1808006354}
   m_Layer: 0
   m_Name: LLMConnecter
   m_TagString: Untagged
@@ -9179,6 +9181,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1450992043}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1808006354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808006350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75cb5f827df01e849b771b20ba49d300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LLMLocal_Simple
+  llmAgent: {fileID: 1216524870}
 --- !u!1001 &1922137272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9928,7 +9943,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2096859996
 MonoBehaviour:
   m_ObjectHideFlags: 0

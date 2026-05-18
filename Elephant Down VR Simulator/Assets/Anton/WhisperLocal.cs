@@ -15,49 +15,41 @@ public class WhisperLocal : MonoBehaviour
     public bool IsBusy { get; private set; }
 
     // ✅ SAME ENTRY POINT (used by VoicePipelineConnector)
-    public async void Transcribe(AudioClip clip)
+    public async void Transcribe(AudioChunk chunk)
     {
-        if (clip == null || IsBusy)
+        if (chunk.Data == null || chunk.Data.Length == 0 || IsBusy)
             return;
 
         IsBusy = true;
 
+        float start = Time.realtimeSinceStartup;
+        Debug.Log(">>> WHISPER START");
+
         try
         {
-            Debug.Log("Starting Whisper transcription...");
+            var result = await whisper.GetTextAsync(
+                chunk.Data,
+                chunk.Frequency,
+                chunk.Channels
+            );
 
-            // ✅ Convert AudioClip → float[]
-            float[] samples = new float[clip.samples * clip.channels];
-            clip.GetData(samples, 0);
+            float end = Time.realtimeSinceStartup;
+            Debug.Log($"<<< WHISPER DONE: {end - start:F2}s");
 
-            int frequency = clip.frequency;
-            int channels = clip.channels;
-
-            // ✅ Run Whisper
-            var result = await whisper.GetTextAsync(samples, frequency, channels);
-
-            if (result == null)
-            {
-                Debug.LogWarning("Whisper returned null");
-                return;
-            }
+            if (result == null) return;
 
             string text = result.Result;
 
             if (string.IsNullOrWhiteSpace(text))
-            {
-                Debug.LogWarning("Empty transcription");
                 return;
-            }
 
-            Debug.Log("Whisper transcription: " + text);
+            Debug.Log("Transcription: " + text);
 
-            // ✅ Send to next step (LLM)
             OnTranscriptionReady?.Invoke(text);
         }
         catch (Exception e)
         {
-            Debug.LogError("Whisper error: " + e.Message);
+            Debug.LogError(e.Message);
         }
         finally
         {

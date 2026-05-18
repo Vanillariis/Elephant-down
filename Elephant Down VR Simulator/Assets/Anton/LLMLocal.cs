@@ -59,12 +59,12 @@ public class LLMLocal : MonoBehaviour
             {
                 engineeredPrompt = personality.BuildPrompt(userText, ragPrompt, memoryText);
             }
-
+            Debug.Log("Prompt length: " + engineeredPrompt.Length);
             Debug.Log("FINAL PROMPT:\n" + engineeredPrompt);
-
+            Debug.Log(">>> CALLING LLM");
             // ✅ Wait for full response from LLMAgent
             string finalText = await llmAgent.Chat(engineeredPrompt);
-
+            Debug.Log("<<< LLM RETURNED");
             if (string.IsNullOrWhiteSpace(finalText))
             {
                 Debug.LogWarning("Empty LLM response");

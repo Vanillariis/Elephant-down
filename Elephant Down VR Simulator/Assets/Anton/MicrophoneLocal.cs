@@ -1,115 +1,85 @@
 using UnityEngine;
 using UnityEngine.XR;
 using System;
+using Whisper.Utils;
 
 public class MicrophoneLocal : MonoBehaviour
 {
-    [Header("Microphone")]
+    [SerializeField] private MicrophoneRecord microphoneRecord;
     [SerializeField] private SupertonicTTSLocal tts;
 
-    public Action<AudioClip> OnRecordingFinished;
+    public Action<AudioChunk> OnRecordingFinished;
 
-    private AudioClip clip;
     private bool recording;
 
-    // ✅ Keyboard key (kept)
     [Header("Input")]
     [SerializeField] private KeyCode recordKey = KeyCode.W;
 
-    private void OnDestroy()
+    private void Awake()
     {
-        if (recording)
-        {
-            Microphone.End(null);
-        }
+        // ✅ hook into Whisper system
+        microphoneRecord.OnRecordStop += HandleRecordStop;
     }
+
+
+    private void HandleRecordStop(AudioChunk chunk)
+    {
+        StartCoroutine(DelayedInvoke(chunk));
+    }
+
+    private System.Collections.IEnumerator DelayedInvoke(AudioChunk chunk)
+    {
+        yield return null; // let frame finish ✅
+
+        OnRecordingFinished?.Invoke(chunk);
+    }
+
 
     public void StartRecording()
     {
-        recording = true;
+        if (recording) return;
 
-        // ✅ Stop speech immediately (same behavior as recorder)
         if (tts != null)
-        {
             tts.Stop();
-        }
 
-        clip = Microphone.Start(null, false, 60, 44100);
+        microphoneRecord.StartRecord(); // ✅ use their system
+        recording = true;
 
         Debug.Log("Recording started...");
     }
 
-    private void StopRecording()
+    public void StopRecording()
     {
+        if (!recording) return;
+
+        microphoneRecord.StopRecord(); // ✅ buffered nicely
         recording = false;
 
-        int position = Microphone.GetPosition(null);
-        Microphone.End(null);
-
-        // ✅ Safety check (from MicrophoneRecorder)
-        if (position <= 0)
-        {
-            Debug.LogWarning("No microphone data recorded.");
-            return;
-        }
-
-        // ✅ Trim audio (IMPORTANT)
-        float[] samples = new float[position * clip.channels];
-        clip.GetData(samples, 0);
-
-        AudioClip trimmedClip = AudioClip.Create(
-            "TrimmedRecording",
-            position,
-            clip.channels,
-            clip.frequency,
-            false
-        );
-
-        trimmedClip.SetData(samples, 0);
-
-        Debug.Log("Recording stopped. Length: " + position);
-
-        OnRecordingFinished?.Invoke(trimmedClip);
+        Debug.Log("Recording stopped...");
     }
 
     private void Update()
     {
-        // =====================================
-        // ✅ VR CONTROLLER INPUT
-        // =====================================
+        // ✅ VR input
         var device = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
 
         if (device.isValid &&
             device.TryGetFeatureValue(CommonUsages.primaryButton, out var pressed))
         {
             if (pressed && !recording)
-            {
                 StartRecording();
-            }
 
             if (!pressed && recording)
-            {
                 StopRecording();
-            }
         }
 
-        // =====================================
-        // ✅ KEYBOARD INPUT (kept)
-        // =====================================
+        // ✅ Keyboard input
         if (Input.GetKeyDown(recordKey) && !recording)
-        {
             StartRecording();
-        }
 
         if (Input.GetKeyUp(recordKey) && recording)
-        {
             StopRecording();
-        }
     }
 
-    // ✅ Public state (unchanged)
-    public bool IsRecording
-    {
-        get { return recording; }
-    }
+    public bool IsRecording => recording;
 }
