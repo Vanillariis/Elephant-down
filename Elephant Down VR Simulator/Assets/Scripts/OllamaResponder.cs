@@ -71,6 +71,8 @@ public class OllamaResponder : MonoBehaviour
                 .Replace(cleanedText, @"\[\d{2}:\d{2}:\d{2}.*?\]", "");
 
             cleanedText = cleanedText.Trim();
+            cleanedText = cleanedText.TrimStart('\\');
+
 
             Debug.Log("CLEANED TEXT: " + cleanedText);
             Debug.Log("TEXT SENT TO PIPER: >>>" + cleanedText + "<<<");

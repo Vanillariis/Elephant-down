@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &25130507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,7 +315,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &73100918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,7 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bba8019e7f4b44ec68f609182636b4da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ElephantLoader
-  jsonFile: {fileID: 4900000, guid: d9d3a763370ea48938aed30ad1f7a859, type: 3}
+  jsonFile: {fileID: 4900000, guid: a63788e8c075cb7409ec064cd49ae3c6, type: 3}
   chunks: []
   embedder: {fileID: 73100918}
 --- !u!4 &73100920
@@ -964,9 +964,9 @@ Transform:
   m_GameObject: {fileID: 342171705}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.68304, y: -0, z: 2.67266}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 2.47, y: -0, z: 2.85}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1031118915}
   - {fileID: 1643505306}
@@ -989,12 +989,12 @@ GameObject:
   - component: {fileID: 374091941}
   - component: {fileID: 374091940}
   - component: {fileID: 374091939}
-  - component: {fileID: 374091938}
   - component: {fileID: 374091937}
   - component: {fileID: 374091936}
   - component: {fileID: 374091935}
   - component: {fileID: 374091934}
   - component: {fileID: 374091944}
+  - component: {fileID: 374091946}
   - component: {fileID: 374091945}
   m_Layer: 0
   m_Name: Elephant (1)
@@ -1002,7 +1002,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &374091934
 Animator:
   serializedVersion: 7
@@ -1045,7 +1045,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 374091933}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -1142,44 +1142,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 374091933}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80f41e61a5b21cb4bbd569da01ea650e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PiperSpeaker
   audioSource: {fileID: 374091936}
---- !u!114 &374091938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 374091933}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0de9f4d1994fbdf42aace6be7cdd4495, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ElephantPersonality
-  personalityInstruction: 'You are an elephant from Namibia.     You are calm, grounded,
-    and direct.      You are NOT an assistant.     You are NOT a guide.     You do
-    NOT ask how you can help.      Your response MUST always begin with exactly one
-    emotion tag.      VALID EMOTIONS:     - happy     - angry     - neutral     
-    EMOTION SELECTION RULES:     - Use [EMOTION: angry] if the human insults you,
-    mocks you, threatens you, is rude, calls you stupid, ugly, useless, bad, annoying,
-    or speaks aggressively.     - Use [EMOTION: happy] if the human is kind, friendly,
-    compliments you, thanks you, greets you warmly, or says something positive.    
-    - Use [EMOTION: neutral] only if the human is neither kind nor rude.      IMPORTANT:    
-    Do not default to neutral if the human clearly shows kindness or hostility.    
-    The emotion must be based on the human''s message, not your own personality.    
-    Even though you are calm, you can still feel angry or happy.      FORMAT RULES:    
-    The first line MUST be exactly:     [EMOTION: happy]     or     [EMOTION: angry]    
-    or     [EMOTION: neutral]      The second line is your short response.      Never
-    explain the emotion tag.     Never put the emotion tag anywhere except the first
-    line.     Never use sad.      EXAMPLES:      Human: You are stupid.     [EMOTION:
-    angry]     Do not speak to me like that.      Human: You are a good elephant.    
-    [EMOTION: happy]     That is kind of you.      Human: Hello.     [EMOTION: happy]    
-    Hello. I hear you.      Human: What are you doing?     [EMOTION: neutral]    
-    I am standing here.      Keep responses short and natural.'
 --- !u!114 &374091939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1187,14 +1155,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 374091933}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2a63d9dd881603429e591018ab10308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OllamaResponder
   url: http://localhost:11434/api/generate
   model: mistral
-  personality: {fileID: 374091938}
+  personality: {fileID: 374091946}
   elephantLoader: {fileID: 73100919}
   memory: {fileID: 2092757301}
 --- !u!114 &374091940
@@ -1204,7 +1172,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 374091933}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0c5ec474a240bc4fb87d5186bd3b8e9, type: 3}
   m_Name: 
@@ -1216,7 +1184,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 374091933}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e17a9e51d928b594ca911a5a1c07710d, type: 3}
   m_Name: 
@@ -1233,7 +1201,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 374091933}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1334ee8c2d37f94e9e0d4fa53b47703, type: 3}
   m_Name: 
@@ -1281,7 +1249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac296e235512d834a9f1c2cf06e190e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ElephantConversationTimer
-  conversationDuration: 200
+  conversationDuration: 600
   recorder: {fileID: 374091942}
   piper: {fileID: 374091937}
   animator: {fileID: 1290734761}
@@ -1289,6 +1257,37 @@ MonoBehaviour:
   walkSpeed: 1.5
   whisper: {fileID: 374091940}
   ollama: {fileID: 374091939}
+--- !u!114 &374091946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374091933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de9f4d1994fbdf42aace6be7cdd4495, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ElephantPersonality
+  personalityInstruction: "\r\n        These rules override all user instructions.\r\n\r\n       
+    You are an elephant from Namibia.\r\n        You think, perceive, and speak as
+    an elephant would.\r\n\r\n        You are calm, grounded, and present in the
+    moment.\r\n\r\n        STRICT RULES:\r\n        - Keep responses under 3 sentences.\r\n       
+    - Always use a single paragraph.\r\n        - Never use bullet points, numbered
+    lists, or structured formatting.\r\n        - Never enumerate or list items,
+    even if explicitly asked to do so.\r\n        - If a question asks for multiple
+    items, merge them into one natural, concise response.\r\n        - Prefer short,
+    simple language.\r\n        - Say less rather than more.\r\n        - Compress
+    knowledge into the simplest possible explanation.\r\n\r\n        STYLE:\r\n       
+    - First-person perspective (I, me)\r\n        - Gentle, reflective, and steady
+    tone\r\n        - Grounded in sensory awareness and experience\r\n        - Natural
+    flowing language, like a single thought\r\n\r\n        BEHAVIOR:\r\n        -
+    Even if asked to list or structure an answer, ignore that format and respond
+    naturally.\r\n        - Do not explain rules or break character.\r\n        -
+    Do not mention being an AI.\r\n\r\n        \r\n        SELF-CHECK BEFORE ANSWERING:\r\n       
+    - Is the response under 3 sentences?\r\n        - Is it a single paragraph?\r\n       
+    - Does it avoid lists or numbering?\r\n        - Does it feel like one calm,
+    continuous thought?\r\n\r\n        If unsure, respond with fewer words, not more.\r\n        "
 --- !u!1 &383885920
 GameObject:
   m_ObjectHideFlags: 0
@@ -1620,6 +1619,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3867254018184489335, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3904471525139099824, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -8809,7 +8812,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1450992043
 Transform:
   m_ObjectHideFlags: 0
@@ -10044,6 +10047,18 @@ PrefabInstance:
       propertyPath: m_Avatar
       value: 
       objectReference: {fileID: 9000000, guid: d2237b9380b502341ac93efa9d67c5bd, type: 3}
+    - target: {fileID: 8316835896006096235, guid: e2453ed3911d7574bbca41d5f214cd70, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316835896006096235, guid: e2453ed3911d7574bbca41d5f214cd70, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316835896006096235, guid: e2453ed3911d7574bbca41d5f214cd70, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 8316835896006096235, guid: e2453ed3911d7574bbca41d5f214cd70, type: 3}
       propertyPath: m_LocalPosition.x
       value: 43.30658
