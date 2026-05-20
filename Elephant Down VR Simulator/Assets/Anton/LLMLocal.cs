@@ -10,7 +10,7 @@ public class LLMLocal : MonoBehaviour
     [SerializeField] private LLMAgent llmAgent;
 
     [Header("Custom Logic")]
-    [SerializeField] private ElephantPersonality personality;
+    [SerializeField] private ElephantPersonalityLocal personality;
     [SerializeField] private ElephantLoader elephantLoader;
     [SerializeField] private ConversationMemory memory;
 
@@ -18,15 +18,29 @@ public class LLMLocal : MonoBehaviour
     public Action<string> OnRawResponseReady;   // raw full output (optional debug)
     public Action<string> OnEmotionDetected;
 
+    public bool IsReady { get; private set; } = false;
     public bool IsBusy { get; private set; }
+
+    public void Warmup(Action onDone)
+    {
+        Debug.Log("Warming up LLM...");
+
+        _ = llmAgent.Warmup(() =>
+        {
+            Debug.Log("LLM Ready");
+            IsReady = true;
+            onDone?.Invoke();
+        });
+    }
+
 
     // ✅ MAIN ENTRY
     public async Task GenerateResponse(string userText)
     {
         if (IsBusy)
         {
-            Debug.LogWarning("LLM is busy, ignoring input");
-            return;
+            Debug.Log("Cancelling current LLM request...");
+            Cancel();
         }
 
         if (string.IsNullOrWhiteSpace(userText))
@@ -78,19 +92,47 @@ public class LLMLocal : MonoBehaviour
             // =============================
             string emotion = "neutral";
 
-            var match = Regex.Match(finalText, @"\[EMOTION:\s*(.*?)\]");
+            // 1. [EMOTION: happy]
+            var match = Regex.Match(finalText, @"\[EMOTION:\s*(.*?)\]", RegexOptions.IgnoreCase);
+
             if (match.Success)
             {
                 emotion = match.Groups[1].Value.ToLower();
             }
+            else
+            {
+                // 2. [Happy]
+                match = Regex.Match(finalText, @"^\s*\[(.*?)\]", RegexOptions.IgnoreCase);
+                if (match.Success)
+                {
+                    emotion = match.Groups[1].Value.ToLower();
+                }
+                else
+                {
+                    // 3. fallback keywords (VERY important)
+                    if (finalText.ToLower().Contains("happy")) emotion = "happy";
+                    else if (finalText.ToLower().Contains("sad")) emotion = "sad";
+                    else if (finalText.ToLower().Contains("angry")) emotion = "angry";
+                }
+            }
+
+            Debug.Log("EXTRACTED EMOTION: " + emotion);
 
             // =============================
             // Clean output (for TTS)
             // =============================
             string cleanedText = finalText;
 
-            cleanedText = Regex.Replace(cleanedText, @"\[EMOTION:.*?\]", "");
+            // Remove [EMOTION: xxx]
+            cleanedText = Regex.Replace(cleanedText, @"\[EMOTION:\s*.*?\]", "", RegexOptions.IgnoreCase);
+
+            // ✅ Remove simple emotion tags like [Neutral], [Happy], etc.
+            cleanedText = Regex.Replace(cleanedText, @"^\s*\[[^\]]+\]\s*", "");
+
+            // Remove timestamps if any
             cleanedText = Regex.Replace(cleanedText, @"\[\d{2}:\d{2}:\d{2}.*?\]", "");
+
+            // Trim final result
             cleanedText = cleanedText.Trim();
 
             Debug.Log("CLEANED TEXT:\n" + cleanedText);
@@ -132,7 +174,12 @@ public class LLMLocal : MonoBehaviour
     // ✅ Optional cancel (already good)
     public void Cancel()
     {
+        if (!IsBusy) return;
+
+        Debug.Log("LLM Cancel Requested");
+
         llmAgent.CancelRequests();
         IsBusy = false;
     }
+
 }

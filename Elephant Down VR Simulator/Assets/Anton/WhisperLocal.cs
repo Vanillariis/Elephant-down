@@ -22,11 +22,15 @@ public class WhisperLocal : MonoBehaviour
 
         IsBusy = true;
 
-        float start = Time.realtimeSinceStartup;
-        Debug.Log(">>> WHISPER START");
-
         try
         {
+
+            // ✅ SMALL delay to avoid frame spike (very impactful)
+            await Task.Delay(50);
+
+            float start = Time.realtimeSinceStartup;
+            Debug.Log(">>> WHISPER START");
+
             var result = await whisper.GetTextAsync(
                 chunk.Data,
                 chunk.Frequency,

@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Reflection;
 using Supertonic.Unity;
+using System;
 
 [RequireComponent(typeof(SupertonicTtsPlayer))]
 public class SupertonicTTSLocal : MonoBehaviour
@@ -9,9 +10,12 @@ public class SupertonicTTSLocal : MonoBehaviour
     private SupertonicTtsPlayer tts;
 
     private bool isReady = false;
+    public bool IsReady => isReady;
     private bool isSpeaking = false;
 
     private string queuedText = null;
+
+    public Action OnSpeechFinished;
 
     private void Awake()
     {
@@ -158,7 +162,7 @@ public class SupertonicTTSLocal : MonoBehaviour
         float ttsEndTime = Time.realtimeSinceStartup;
         Debug.Log($"<<< TTS DONE: {(ttsEndTime - ttsStartTime):F2} seconds");
 
-
         isSpeaking = false;
+        OnSpeechFinished?.Invoke();
     }
 }

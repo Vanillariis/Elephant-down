@@ -8,12 +8,19 @@ public class MicrophoneLocal : MonoBehaviour
     [SerializeField] private MicrophoneRecord microphoneRecord;
     [SerializeField] private SupertonicTTSLocal tts;
 
+    [Header("Pipeline refs (IMPORTANT)")]
+    [SerializeField] private WhisperLocal whisper;  // 👈 add this
+
     public Action<AudioChunk> OnRecordingFinished;
 
     private bool recording;
 
     [Header("Input")]
     [SerializeField] private KeyCode recordKey = KeyCode.W;
+
+    [SerializeField] private LLMLocal llm;
+
+    private bool inputEnabled = false;
 
     private void Awake()
     {
@@ -29,15 +36,25 @@ public class MicrophoneLocal : MonoBehaviour
 
     private System.Collections.IEnumerator DelayedInvoke(AudioChunk chunk)
     {
-        yield return null; // let frame finish ✅
+        // ✅ Let XR finish a few frames (BIG improvement)
+        yield return new WaitForSeconds(0.05f);
 
+        // ✅ Prevent Whisper overlap (very important)
+        if (whisper != null && whisper.IsBusy)
+        {
+            yield return new WaitUntil(() => !whisper.IsBusy);
+        }
+
+        // ✅ Now safe to continue
         OnRecordingFinished?.Invoke(chunk);
     }
-
 
     public void StartRecording()
     {
         if (recording) return;
+
+        if (llm != null)
+            llm.Cancel();
 
         if (tts != null)
             tts.Stop();
@@ -60,6 +77,10 @@ public class MicrophoneLocal : MonoBehaviour
 
     private void Update()
     {
+        // ✅ Block input until experience starts
+        if (!inputEnabled)
+            return;
+
         // ✅ VR input
         var device = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
 
@@ -82,4 +103,12 @@ public class MicrophoneLocal : MonoBehaviour
     }
 
     public bool IsRecording => recording;
+
+
+    public void EnableInput()
+    {
+        inputEnabled = true;
+        Debug.Log("🎤 Microphone input ENABLED");
+    }
+
 }
